@@ -11,6 +11,7 @@ var rev         = require('gulp-rev');
 var del         = require('del');
 var browserSync = require('browser-sync');
 var spa         = require('browser-sync-spa');
+var deploy      = require('gulp-gh-pages');
 
 browserSync.use(spa());
 
@@ -155,3 +156,9 @@ exports.serve = gulp.series(compilePug, compileSass, compileJs, move, browserSyn
 // Move assets task
 //gulp.task('moveassets', gulp.series('move'));
 
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
+
+exports.deploy = gulp.series('deploy')
