@@ -1,0 +1,22 @@
+{
+  "name": "lang-pro-pia",
+  "version": "1.0.0",
+  "description": "This is a repository for a subject of my career",
+  "main": ".",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HectorMtz22/lang-pro-pia.git"
+  },
+  "author": "HectorMtz22",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HectorMtz22/lang-pro-pia/issues"
+  },
+  "homepage": "https://github.com/HectorMtz22/lang-pro-pia#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
