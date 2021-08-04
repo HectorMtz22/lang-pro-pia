@@ -158,5 +158,5 @@ exports.serve = gulp.series(compilePug, compileSass, compileJs, move, browserSyn
 
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
-    .pipe(deploy())
+    .pipe(deploy({force: true}))
 });
