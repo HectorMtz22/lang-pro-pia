@@ -34,5 +34,11 @@
     "gulp-zip": "^5.1.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.3.2"
+  },
+  "resolutions": {
+    "gift": "^0.10.2"
+  },
+  "dependencies": {
+    "gulp-gh-pages": "^0.5.4"
   }
 }
