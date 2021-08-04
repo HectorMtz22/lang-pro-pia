@@ -160,5 +160,3 @@ gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
     .pipe(deploy())
 });
-
-exports.deploy = gulp.series('deploy')
