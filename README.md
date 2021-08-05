@@ -1,1 +1,1 @@
-# lang-pro-pia
+# Este es un proyecto para la clase de `Lenguajes de Programación` 
