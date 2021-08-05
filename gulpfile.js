@@ -38,6 +38,11 @@ const jsFiles = {
   watch: paths.src + '/js/**/*.js'
 }
 
+const variables = {
+  src: paths.src + '/data/**/*.json',
+  watch: paths.src + '/data/**/*.json'
+}
+
 const assetsFiles = {
   src: paths.src + '/assets/**/*.*',
   dist: paths.dist,
@@ -53,10 +58,8 @@ const zipFiles = {
 // Compile Handlebars
 function compileHbs () {
   const templateData = {
-    firstName: 'Kaanon',
     ...sources
   }
-  console.log(templateData)
   const options = {
     ignorePartials: true, // ignores the unknown footer2 partial in the handlebars template, defaults to false
     batch: ['./src/partials'],
@@ -92,7 +95,13 @@ const compileJs = () => {
       stream: true
     }))
 }
-
+// Compiles Vanilla JS
+const compileVariables = () => {
+  return gulp.src(variables.src)
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+}
 // Compiles ES6 JS
 /*
 const compileJsBabel = () => {
@@ -123,6 +132,7 @@ function browserSyncServe (done) {
 
 // Watch Task
 function watch () {
+  gulp.watch(variables.watch, gulp.series(compileVariables))
   gulp.watch(hbsFiles.watch, gulp.series(compileHbs))
   gulp.watch(scssFiles.watch, gulp.series(compileSass))
   gulp.watch(jsFiles.watch, gulp.series(compileJs))
