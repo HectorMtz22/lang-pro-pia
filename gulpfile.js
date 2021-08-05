@@ -1,75 +1,71 @@
-'use strict';
+'use strict'
 
-var gulp        = require('gulp');
-var gutil       = require('gulp-util');
-var sass        = require('gulp-sass')(require('node-sass'));
-var pug         = require('gulp-pug');
-var babel       = require('gulp-babel');
-var livereload  = require('gulp-livereload');
-var zip         = require('gulp-zip');
-var rev         = require('gulp-rev');
-var del         = require('del');
-var browserSync = require('browser-sync');
-var spa         = require('browser-sync-spa');
+const gulp = require('gulp')
+const sass = require('gulp-sass')(require('node-sass'))
+const pug = require('gulp-pug')
+const zip = require('gulp-zip')
+const rev = require('gulp-rev')
+const browserSync = require('browser-sync')
+const spa = require('browser-sync-spa')
 
-browserSync.use(spa());
+browserSync.use(spa())
 
-var paths = {
+const paths = {
   src: 'src',
   dist: 'dist'
-};
+}
 
-var pugFiles = {
+const pugFiles = {
   src: paths.src + '/**/!(_)*.pug',
   dist: paths.dist,
   watch: paths.src + '/**/*.pug'
 }
 
-var htmlFiles = {
-  watch: paths.dist + '/**/*.html'
-}
+// const htmlFiles = {
+//  watch: paths.dist + '/**/*.html'
+// }
 
-var scssFiles = {
+const scssFiles = {
   src: paths.src + '/scss/index.scss',
   dist: paths.dist + '/css/',
   watch: paths.src + '/scss/**/*.scss'
 }
 
-var jsFiles = {
+const jsFiles = {
   src: paths.src + '/js/**/*.js',
   dist: paths.dist + '/js',
   watch: paths.src + '/js/**/*.js'
 }
 
-var assetsFiles = {
+const assetsFiles = {
   src: paths.src + '/assets/**/*.*',
   dist: paths.dist,
   watch: paths.src + '/assets/**/*.*'
 }
 
-var zipFiles = {
+const zipFiles = {
   src: paths.dist + '/**/*.*',
   dist: './zip/',
   name: 'ov-theme.zip'
 }
 
 // Compiles pug
-function compilePug() {
+function compilePug () {
   return gulp.src(pugFiles.src)
     .pipe(pug({
       locals: {},
       pretty: true
     }))
     .pipe(gulp.dest(pugFiles.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 };
 
 // Compiles SCSS
-function compileSass() {
+function compileSass () {
   return gulp.src(scssFiles.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(scssFiles.dist))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 };
 
 // Compiles Vanilla JS
@@ -78,18 +74,20 @@ const compileJs = () => {
     .pipe(gulp.dest(jsFiles.dist))
     .pipe(browserSync.reload({
       stream: true
-    }));
-};
+    }))
+}
 
 // Compiles ES6 JS
+/*
 const compileJsBabel = () => {
   return gulp.src(jsFiles.src)
     .pipe(babel({ presets: ['es2015'] }))
-    .pipe(gulp.dest(jsFiles.dist));
-};
+    .pipe(gulp.dest(jsFiles.dist))
+}
+*/
 
 // Inits Browser Sync server
-function browserSyncServe(done) {
+function browserSyncServe (done) {
   browserSync.init({
     ghostMode: true,
     notify: false,
@@ -97,32 +95,22 @@ function browserSyncServe(done) {
       baseDir: paths.dist
     },
     open: true
-  });
-  done();
+  })
+  done()
 }
 
 // Simple timeout to deal with Pug compiling lag
-function reloadBrowserSyncPug() {
-  return setTimeout(reloadBrowserSync, 500);
+/* function reloadBrowserSyncPug () {
+  return setTimeout(reloadBrowserSync, 500)
 }
-
-// Reload Browser sync
-function reloadBrowserSync() {
-  browserSync.reload();
-}
-
-// Clean dist dir
-function clean() {
-  return;
-  // return del([paths.dist + '/**/*/*.*', paths.dist + '/*', paths.dist]);
-}
+*/
 
 // Watch Task
-async function watch() {
-  await gulp.watch(pugFiles.watch, gulp.series(compilePug));
-  await gulp.watch(scssFiles.watch, gulp.series(compileSass));
-  await gulp.watch(jsFiles.watch, gulp.series(compileJs));
-  await gulp.watch(assetsFiles.watch, gulp.series(move));
+async function watch () {
+  await gulp.watch(pugFiles.watch, gulp.series(compilePug))
+  await gulp.watch(scssFiles.watch, gulp.series(compileSass))
+  await gulp.watch(jsFiles.watch, gulp.series(compileJs))
+  await gulp.watch(assetsFiles.watch, gulp.series(move))
 };
 
 // Zip dist task
@@ -130,27 +118,28 @@ const zipDist = () => {
   return gulp.src(zipFiles.src)
     .pipe(zip(zipFiles.name))
     .pipe(rev())
-    .pipe(gulp.dest(zipFiles.dist));
-};
+    .pipe(gulp.dest(zipFiles.dist))
+}
 
 // Move all assets task
 const move = () => {
   return gulp.src(assetsFiles.src)
-    .pipe(gulp.dest(assetsFiles.dist));
+    .pipe(gulp.dest(assetsFiles.dist))
 }
 
 // [npm run build]
 // exports.default = gulp.series(['clean', 'pug', 'sass', 'js', 'move']);
-exports.default = gulp.series(compilePug, compileSass, compileJs, move);
+exports.default = gulp.series(compilePug, compileSass, compileJs, move)
 
 // [npm run serve] Serve Task
-exports.serve = gulp.series(compilePug, compileSass, compileJs, move, browserSyncServe, watch);
+exports.serve = gulp.series(compilePug, compileSass, compileJs, move, browserSyncServe, watch)
+exports.zip = gulp.series(zipDist)
 
 // Browsersync Task
-//gulp.task('browsersync', browserSyncServe);
+// gulp.task('browsersync', browserSyncServe);
 
 // Clean Task
-//gulp.task('clean', clean);
+// gulp.task('clean', clean);
 
 // Move assets task
-//gulp.task('moveassets', gulp.series('move'));
+// gulp.task('moveassets', gulp.series('move'));
