@@ -26,7 +26,7 @@ const hbsFiles = {
 // }
 
 const scssFiles = {
-  src: paths.src + '/scss/index.scss',
+  src: paths.src + '/scss/**/*.scss',
   dist: paths.dist + '/css/',
   watch: paths.src + '/scss/**/*.scss'
 }
@@ -119,11 +119,11 @@ function browserSyncServe (done) {
 */
 
 // Watch Task
-async function watch () {
-  await gulp.watch(hbsFiles.watch, gulp.series(compileHbs))
-  await gulp.watch(scssFiles.watch, gulp.series(compileSass))
-  await gulp.watch(jsFiles.watch, gulp.series(compileJs))
-  await gulp.watch(assetsFiles.watch, gulp.series(move))
+function watch () {
+  gulp.watch(hbsFiles.watch, gulp.series(compileHbs))
+  gulp.watch(scssFiles.watch, gulp.series(compileSass))
+  gulp.watch(jsFiles.watch, gulp.series(compileJs))
+  gulp.watch(assetsFiles.watch, gulp.series(move))
 };
 
 // Zip dist task
