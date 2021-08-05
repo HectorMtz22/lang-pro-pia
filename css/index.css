@@ -1,8 +1,18 @@
 * {
-  padding: 0%;
-  list-style: none; }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-:root {
-  --nomames: #000
-    --chido: #fff
-; }
+header {
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  padding: 5px 5%; }
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px 5%; }
