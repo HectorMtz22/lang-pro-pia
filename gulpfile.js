@@ -8,6 +8,7 @@ const browserSync = require('browser-sync')
 const spa = require('browser-sync-spa')
 const handlebars = require('gulp-compile-handlebars')
 const rename = require('gulp-rename')
+const sources = require('./src/data')
 browserSync.use(spa())
 
 const paths = {
@@ -52,8 +53,10 @@ const zipFiles = {
 // Compile Handlebars
 function compileHbs () {
   const templateData = {
-    firstName: 'Kaanon'
+    firstName: 'Kaanon',
+    ...sources
   }
+  console.log(templateData)
   const options = {
     ignorePartials: true, // ignores the unknown footer2 partial in the handlebars template, defaults to false
     batch: ['./src/partials'],
