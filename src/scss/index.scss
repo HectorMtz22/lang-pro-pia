@@ -4,3 +4,8 @@
   box-sizing: border-box;
   font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+$paddingGlobal: 5px 5%;
+
+@import 'header';
+@import 'footer';
