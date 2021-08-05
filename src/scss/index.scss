@@ -1,8 +1,11 @@
-@import "style";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 :root {
   --nomames: #000;
   --chido: #fff;
-
-
 }

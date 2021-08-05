@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp",
-    "dev": "gulp serve",
+    "dev": "npm start && gulp serve",
     "deploy": "npm run build && node deploy.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,8 +28,10 @@
     "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-compile-handlebars": "^0.6.1",
     "gulp-livereload": "^4.0.2",
     "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-rev": "^9.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-util": "^3.0.8",
@@ -42,7 +44,8 @@
     "gift": "^0.10.2"
   },
   "dependencies": {
-    "gulp-gh-pages": "^0.5.4"
+    "gulp-gh-pages": "^0.5.4",
+    "handlebars": "^4.7.7"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"

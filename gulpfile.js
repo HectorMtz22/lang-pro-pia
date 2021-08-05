@@ -7,7 +7,8 @@ const zip = require('gulp-zip')
 const rev = require('gulp-rev')
 const browserSync = require('browser-sync')
 const spa = require('browser-sync-spa')
-
+const handlebars = require('gulp-compile-handlebars')
+const rename = require('gulp-rename')
 browserSync.use(spa())
 
 const paths = {
@@ -19,6 +20,12 @@ const pugFiles = {
   src: paths.src + '/**/!(_)*.pug',
   dist: paths.dist,
   watch: paths.src + '/**/*.pug'
+}
+
+const hbsFiles = {
+  src: paths.src + '/**/!(_)*.hbs',
+  dist: paths.dist,
+  watch: paths.src + '/**/*.hbs'
 }
 
 // const htmlFiles = {
@@ -129,10 +136,10 @@ const move = () => {
 
 // [npm run build]
 // exports.default = gulp.series(['clean', 'pug', 'sass', 'js', 'move']);
-exports.default = gulp.series(compilePug, compileSass, compileJs, move)
+// exports.default = gulp.series(compilePug, compileSass, compileJs, move)
 
 // [npm run serve] Serve Task
-exports.serve = gulp.series(compilePug, compileSass, compileJs, move, browserSyncServe, watch)
+exports.serve = gulp.series(browserSyncServe, watch)
 exports.zip = gulp.series(zipDist)
 
 // Browsersync Task
@@ -143,3 +150,26 @@ exports.zip = gulp.series(zipDist)
 
 // Move assets task
 // gulp.task('moveassets', gulp.series('move'));
+
+gulp.task('default', function () {
+  const templateData = {
+    firstName: 'Kaanon'
+  }
+  const options = {
+    ignorePartials: true, // ignores the unknown footer2 partial in the handlebars template, defaults to false
+    batch: ['./src/partials'],
+    helpers: {
+      capitals: function (str) {
+        return str.toUpperCase()
+      }
+    }
+  }
+
+  return gulp.src('src/*.hbs')
+    .pipe(handlebars(templateData, options))
+    .pipe(rename(function (path) {
+      console.log(path)
+      path.extname = '.html'
+    }))
+    .pipe(gulp.dest('dist'))
+})
