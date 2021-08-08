@@ -20,7 +20,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-  lint:
+  install:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -32,11 +32,26 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm ci
+
+
+
+  lint:
+    needs: [install]
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v2
+        with:
+          cache: 'npm'
+          node-version: '14'
       - name: Check ESlint
-        run: npx eslint . 
+        run: npm run lint
 
 
   build:
+    needs: [install]
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -46,8 +61,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: '14'
-      - name: Install dependencies
-        run: npm ci
       - name: Build
         run: npm run build
       - uses: actions/upload-artifact@v2
