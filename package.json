@@ -8,7 +8,7 @@
     "build": "gulp",
     "dev": "npm start && gulp serve",
     "deploy": "node deploy.js",
-    "lint": "eslint .",
+    "lint": "standard .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
