@@ -8,7 +8,7 @@
     "build": "gulp",
     "dev": "npm start && gulp serve",
     "deploy": "node deploy.js",
-    "lint": "standard .",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,7 @@
     "browser-sync": "^2.27.5",
     "browser-sync-spa": "^1.0.3",
     "del": "^6.0.0",
+    "eslint": "^7.32.0",
     "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
