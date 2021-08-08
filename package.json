@@ -7,7 +7,7 @@
     "start": "gulp",
     "build": "gulp",
     "dev": "npm start && gulp serve",
-    "deploy": "npm run build && node deploy.js",
+    "deploy": "node deploy.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
