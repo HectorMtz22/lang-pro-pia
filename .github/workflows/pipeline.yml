@@ -46,6 +46,8 @@ jobs:
         with:
           cache: 'npm'
           node-version: '14'
+      - name: Install dependencies
+        run: npm ci
       - name: Check ESlint
         run: npm run lint
 
@@ -61,6 +63,8 @@ jobs:
         with:
           cache: 'npm'
           node-version: '14'
+      - name: Install dependencies
+        run: npm ci
       - name: Build
         run: npm run build
       - uses: actions/upload-artifact@v2
