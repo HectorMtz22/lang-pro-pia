@@ -1,6 +1,13 @@
 header {
-    background-color: #ccc;
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    padding: $paddingGlobal;
+  background-color: var(--primary-back);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: $paddingGlobal;
+  & section {
+    text-align: center;
+  }
+  & h1,
+  h2 {
+    color: white;
+  }
 }

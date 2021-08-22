@@ -2,10 +2,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-$paddingGlobal: 5px 5%;
+:root {
+  --primary: #545c36;
+  --primary-back: #97a852;
+  --secondary: #5c322d;
+  --secondary-back: #a8635b;
+  --third: #3f4c5c;
+  --surface: #f1f1f1;
+}
 
-@import 'header';
-@import 'footer';
+body {
+  background-color: var(--surface);
+}
+
+img {
+  width: 100%;
+}
+
+$paddingVertical: 5px;
+$paddingHorizontal: 5%;
+$paddingGlobal: $paddingVertical $paddingHorizontal;
+
+.wrapper {
+  display: flex;
+  & .container {
+    margin: 10px auto;
+  }
+}
+
+@import "header";
+@import "sidebar";
+@import "footer";
