@@ -5,12 +5,13 @@
   font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 :root {
-  --primary: #545c36;
-  --primary-back: #97a852;
+  --primary: #52de8f;
+  --primary-back: #002233;
+  --primary-var1: #4bcc83;
   --secondary: #5c322d;
   --secondary-back: #a8635b;
   --third: #3f4c5c;
-  --surface: #f1f1f1; }
+  --surface: #002233; }
 
 body {
   background-color: var(--surface); }
@@ -24,15 +25,27 @@ img {
     margin: 10px auto; }
 
 header {
-  background-color: var(--primary-back);
   display: grid;
   grid-template-columns: 1fr 4fr;
-  padding: 5px 5%; }
+  padding: 5px 5%;
+  height: 25vh; }
   header section {
     text-align: center; }
   header h1,
   header h2 {
     color: white; }
+
+.spacer {
+  width: 100%;
+  aspect-ratio: 2/1;
+  background-image: url(../img/header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; }
 
 .sidebar {
   background-color: var(--primary-back);
