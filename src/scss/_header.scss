@@ -1,8 +1,8 @@
 header {
-  background-color: var(--primary-back);
   display: grid;
   grid-template-columns: 1fr 4fr;
   padding: $paddingGlobal;
+  height: 25vh;
   & section {
     text-align: center;
   }
@@ -10,4 +10,18 @@ header {
   h2 {
     color: white;
   }
+}
+
+.spacer {
+  width: 100%;
+  aspect-ratio: 2/1;
+  background-image: url(../img/header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
