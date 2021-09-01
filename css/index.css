@@ -5,30 +5,46 @@
   font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 :root {
-  --primary: #52de8f;
-  --primary-back: #002233;
-  --primary-var1: #4bcc83;
-  --secondary: #5c322d;
+  --primary: #192a56;
+  --primary-back: #192a56;
+  --secondary: #9c88ff;
+  --secondary-alt: #8c7ae6;
   --secondary-back: #a8635b;
-  --third: #3f4c5c;
+  --third: #00a8ff;
+  --third-alt: #0097e6;
   --surface: #002233; }
 
 body {
-  background-color: var(--surface); }
+  background-color: var(--primary-back); }
 
 img {
   width: 100%; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 .wrapper {
-  display: flex; }
+  display: flex;
+  color: white; }
   .wrapper .container {
-    margin: 10px auto; }
+    max-width: 1000px;
+    margin: 1rem auto; }
+    .wrapper .container main {
+      align-items: center; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem; }
 
 header {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 200px 4fr 200px;
+  align-items: center;
   padding: 5px 5%;
-  height: 25vh; }
+  height: 20vh;
+  z-index: 5; }
   header section {
     text-align: center; }
   header h1,
@@ -45,21 +61,51 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1; }
+  z-index: -2; }
 
 .sidebar {
-  background-color: var(--primary-back);
   color: white;
   height: 100vh;
   position: sticky;
-  top: 0; }
+  top: 0;
+  display: flex;
+  flex-direction: column; }
+  .sidebar main,
   .sidebar section {
+    margin: 10px auto;
     width: 25vw;
-    padding: 5%; }
+    transition: all 300ms ease; }
+  .sidebar main {
+    padding: 1rem; }
+  .sidebar section {
+    background-color: var(--secondary); }
+    .sidebar section:hover {
+      background-color: var(--secondary-alt); }
+  .sidebar aside {
+    background-color: var(--third);
+    padding-left: 2rem;
+    transition: all 300ms ease; }
+    .sidebar aside:hover {
+      background-color: var(--third-alt); }
+  .sidebar button {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem; }
+  .sidebar a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem; }
 
 footer {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 5px 5%; }
+  padding: 5px 5%;
+  text-align: right;
+  color: white; }
