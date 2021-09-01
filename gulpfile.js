@@ -49,6 +49,12 @@ const assetsFiles = {
   watch: paths.src + '/assets/**/*.*'
 }
 
+const javaFiles = {
+  src: paths.src + '/java/**/*.java',
+  dist: paths.dist + '/java',
+  watch: paths.src + '/java/**/*.java'
+}
+
 const zipFiles = {
   src: paths.dist + '/**/*.*',
   dist: './zip/',
@@ -70,37 +76,45 @@ function compileHbs () {
     }
   }
 
-  return gulp.src('src/*.hbs')
+  return gulp
+    .src('src/*.hbs')
     .pipe(handlebars(templateData, options))
-    .pipe(rename(function (path) {
-      path.extname = '.html'
-    }))
+    .pipe(
+      rename(function (path) {
+        path.extname = '.html'
+      })
+    )
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream())
 }
 
 // Compiles SCSS
 function compileSass () {
-  return gulp.src(scssFiles.src)
+  return gulp
+    .src(scssFiles.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(scssFiles.dist))
     .pipe(browserSync.stream())
-};
+}
 
 // Compiles Vanilla JS
 const compileJs = () => {
-  return gulp.src(jsFiles.src)
+  return gulp
+    .src(jsFiles.src)
     .pipe(gulp.dest(jsFiles.dist))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+    .pipe(
+      browserSync.reload({
+        stream: true
+      })
+    )
 }
 // Compiles Vanilla JS
 const compileVariables = () => {
-  return gulp.src(variables.src)
-    .pipe(browserSync.reload({
+  return gulp.src(variables.src).pipe(
+    browserSync.reload({
       stream: true
-    }))
+    })
+  )
 }
 // Compiles ES6 JS
 /*
@@ -137,11 +151,13 @@ function watch () {
   gulp.watch(scssFiles.watch, gulp.series(compileSass))
   gulp.watch(jsFiles.watch, gulp.series(compileJs))
   gulp.watch(assetsFiles.watch, gulp.series(move))
-};
+  gulp.watch(javaFiles.watch, gulp.series(moveJava))
+}
 
 // Zip dist task
 const zipDist = () => {
-  return gulp.src(zipFiles.src)
+  return gulp
+    .src(zipFiles.src)
     .pipe(zip(zipFiles.name))
     .pipe(rev())
     .pipe(gulp.dest(zipFiles.dist))
@@ -149,10 +165,13 @@ const zipDist = () => {
 
 // Move all assets task
 const move = () => {
-  return gulp.src(assetsFiles.src)
-    .pipe(gulp.dest(assetsFiles.dist))
+  return gulp.src(assetsFiles.src).pipe(gulp.dest(assetsFiles.dist))
 }
 
+// Move all assets task
+const moveJava = () => {
+  return gulp.src(javaFiles.src).pipe(gulp.dest(javaFiles.dist))
+}
 // [npm run build]
 // exports.default = gulp.series(['clean', 'pug', 'sass', 'js', 'move']);
 exports.default = gulp.series(compileHbs, compileSass, compileJs, move)
