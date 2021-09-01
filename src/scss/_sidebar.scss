@@ -12,7 +12,7 @@
     transition: $transition;
   }
   & main {
-    padding: 1rem;
+    padding: 3rem 1rem 0;
   }
   & section {
     background-color: var(--secondary);
@@ -36,7 +36,6 @@
     border: none;
     text-align: left;
     font-size: 1rem;
-    
   }
   & a {
     display: inline-block;
