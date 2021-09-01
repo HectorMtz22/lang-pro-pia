@@ -53,6 +53,15 @@ $transition: all 300ms ease;
   gap: 2rem;
 }
 
+.toggleInvisible {
+  transition: $transition;
+  transform: translateX(-100%);
+}
+
+.invisible {
+  display: none;
+}
+
 @import "header";
 @import "sidebar";
 @import "footer";
