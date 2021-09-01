@@ -50,9 +50,9 @@ const assetsFiles = {
 }
 
 const javaFiles = {
-  src: paths.src + '/java/**/*.java',
-  dist: paths.dist + '/java',
-  watch: paths.src + '/java/**/*.java'
+  src: paths.src + '/java/**/*.',
+  dist: paths.dist + '/tareas',
+  watch: paths.src + '/java/**/*.'
 }
 
 const zipFiles = {
