@@ -1,8 +1,9 @@
 header {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 200px 4fr 200px;
+  align-items: center;
   padding: $paddingGlobal;
-  height: 25vh;
+  height: 20vh;
   & section {
     text-align: center;
   }
@@ -10,6 +11,7 @@ header {
   h2 {
     color: white;
   }
+  z-index: 5;
 }
 
 .spacer {
@@ -23,5 +25,5 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
 }
