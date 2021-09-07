@@ -1,0 +1,13 @@
+.navigation {
+  width: 150px;
+  display: flex;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  justify-content: space-between;
+  & a {
+    background-color: var(--secondary);
+    border-radius: 50%;
+    padding: 1rem;
+  }
+}
