@@ -44,3 +44,27 @@
     padding: 1rem;
   }
 }
+
+.flex {
+  & main,
+  & section {
+    width: 100%;
+    margin: 10px auto;
+    transition: $transition;
+  }
+  & main {
+    padding: 3rem 1rem 0;
+  }
+  & section {
+    background-color: var(--secondary);
+    &:hover {
+      background-color: var(--secondary-alt);
+    }
+  }
+  & a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem;
+  }
+}
