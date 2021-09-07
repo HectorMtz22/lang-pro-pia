@@ -9,5 +9,9 @@
     background-color: var(--secondary);
     border-radius: 50%;
     padding: 1rem;
+    transition: $transition;
+    &:hover {
+      background-color: var(--secondary-back);
+    }
   }
 }
