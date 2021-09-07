@@ -128,4 +128,7 @@ footer {
   .navigation a {
     background-color: var(--secondary);
     border-radius: 50%;
-    padding: 1rem; }
+    padding: 1rem;
+    transition: all 300ms ease; }
+    .navigation a:hover {
+      background-color: var(--secondary-back); }
