@@ -38,6 +38,10 @@ a {
   grid-template-columns: 1fr 1.5fr;
   gap: 2rem; }
 
+.flex {
+  display: flex;
+  flex-direction: column; }
+
 .toggleInvisible {
   transition: all 300ms ease;
   transform: translateX(-100%); }
@@ -107,6 +111,26 @@ header {
     text-decoration: none;
     width: 100%;
     padding: 1rem; }
+
+.flex main,
+.flex section {
+  width: 100%;
+  margin: 10px auto;
+  transition: all 300ms ease; }
+
+.flex main {
+  padding: 3rem 1rem 0; }
+
+.flex section {
+  background-color: var(--secondary); }
+  .flex section:hover {
+    background-color: var(--secondary-alt); }
+
+.flex a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  padding: 1rem; }
 
 footer {
   position: fixed;
