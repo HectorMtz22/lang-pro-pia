@@ -49,6 +49,11 @@ a {
 .invisible {
   display: none; }
 
+i {
+  transition: all 300ms ease; }
+  i:hover {
+    transform: scale(1.5); }
+
 header {
   display: grid;
   grid-template-columns: 200px 4fr 200px;
