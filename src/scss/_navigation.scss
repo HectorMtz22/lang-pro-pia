@@ -8,10 +8,11 @@
   & a {
     background-color: var(--secondary);
     border-radius: 50%;
+    box-shadow: 2px 2px 10px var(--primary);
     padding: 1rem;
     transition: $transition;
     &:hover {
-      background-color: var(--secondary-back);
+      background-color: var(--secondary-alt);
     }
   }
 }
