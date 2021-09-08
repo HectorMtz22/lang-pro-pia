@@ -29,7 +29,7 @@ a {
   height: 100vh;
   color: white; }
   .wrapper .container {
-    width: 100%;
+    width: 95%;
     max-width: 700px;
     margin: 3rem auto; }
     .wrapper .container main {
@@ -80,6 +80,12 @@ header {
   left: 0;
   right: 0;
   z-index: -2; }
+
+@media screen and (max-width: 958px) {
+  header {
+    grid-template-columns: 1fr; }
+    header .logo {
+      display: none; } }
 
 .sidebar {
   color: white;
@@ -139,6 +145,10 @@ header {
   text-decoration: none;
   width: 100%;
   padding: 1rem; }
+
+@media screen and (max-width: 780px) {
+  .sidebar {
+    display: none; } }
 
 footer {
   position: fixed;
