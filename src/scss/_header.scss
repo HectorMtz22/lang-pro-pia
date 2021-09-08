@@ -27,3 +27,12 @@ header {
   right: 0;
   z-index: -2;
 }
+
+@media screen and (max-width: 958px) {
+  header {
+    grid-template-columns: 1fr;
+    & .logo {
+      display: none;
+    }
+  }
+}

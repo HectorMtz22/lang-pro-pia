@@ -69,3 +69,9 @@
     padding: 1rem;
   }
 }
+
+@media screen and (max-width: 780px) {
+  .sidebar {
+    display: none;
+  }
+}
