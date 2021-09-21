@@ -1,0 +1,24 @@
+.container {
+  font-size: 1.2em;
+  text-align: justify; }
+
+.question {
+  font-size: 2rem;
+  font-family: "Dancing Script", cursive; }
+
+.img_32,
+.img_169 {
+  display: block;
+  width: 90%;
+  margin: 1rem auto; }
+
+.img_32 {
+  aspect-ratio: 3/2; }
+
+.img_169 {
+  aspect-ratio: 16/9; }
+
+blockquote {
+  padding: 1rem;
+  background-color: var(--secondary-alt);
+  color: black; }

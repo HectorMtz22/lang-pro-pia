@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+  font-family: "Open Sans", Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
 
 :root {
   --primary: #192a56;
@@ -15,7 +15,9 @@
   --surface: #002233; }
 
 body {
-  background-color: var(--primary-back); }
+  background-color: var(--primary-back);
+  -webkit-font-smoothing: antialised;
+  text-rendering: optimizeSpeed; }
 
 img {
   width: 100%; }
