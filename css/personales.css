@@ -4,7 +4,8 @@
 
 .question {
   font-size: 2rem;
-  font-family: "Dancing Script", cursive; }
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 1rem; }
 
 .img_32,
 .img_169 {
@@ -20,5 +21,17 @@
 
 blockquote {
   padding: 1rem;
-  background-color: var(--secondary-alt);
-  color: black; }
+  background: linear-gradient(var(--third), var(--secondary-alt));
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative; }
+  blockquote::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(var(--third-alt), var(--secondary)); }
