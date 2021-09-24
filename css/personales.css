@@ -21,13 +21,5 @@
 blockquote {
   padding: 1rem;
   background-color: var(--fourth);
-  position: relative; }
-  blockquote::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 5px;
-    background: linear-gradient(var(--third-alt), var(--secondary)); }
+  position: relative;
+  border-left: 5px solid var(--fourth-back); }
