@@ -12,12 +12,31 @@
   --secondary-back: #a8635b;
   --third: #00a8ff;
   --third-alt: #0097e6;
+  --fourth: #a3780f;
   --surface: #002233; }
 
 body {
   background-color: var(--primary-back);
   -webkit-font-smoothing: antialised;
   text-rendering: optimizeSpeed; }
+
+h1 {
+  font-family: "Quicksand", sans-serif; }
+
+h2 {
+  font-family: "Quicksand", sans-serif; }
+
+h3 {
+  font-family: "Quicksand", sans-serif; }
+
+h4 {
+  font-family: "Quicksand", sans-serif; }
+
+h5 {
+  font-family: "Quicksand", sans-serif; }
+
+h6 {
+  font-family: "Quicksand", sans-serif; }
 
 img {
   width: 100%; }
@@ -63,13 +82,15 @@ header {
   grid-template-columns: 200px 4fr 200px;
   align-items: center;
   padding: 5px 5%;
-  height: 20vh;
+  height: 3rem;
   z-index: 5; }
   header section {
-    text-align: center; }
-  header h1,
+    grid-column: 1/-1; }
   header h2 {
     color: white; }
+
+.logo {
+  display: none; }
 
 .spacer {
   width: 100%;
@@ -177,3 +198,7 @@ footer {
     transition: all 300ms ease; }
     .navigation a:hover {
       background-color: var(--secondary-alt); }
+
+.heading {
+  text-align: center;
+  padding: 1rem; }
