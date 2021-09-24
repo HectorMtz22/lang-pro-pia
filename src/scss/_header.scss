@@ -3,15 +3,19 @@ header {
   grid-template-columns: 200px 4fr 200px;
   align-items: center;
   padding: $paddingGlobal;
-  height: 20vh;
+  height: 3rem;
   & section {
-    text-align: center;
+    grid-column: 1/-1;
+    // text-align: center;
   }
-  & h1,
-  h2 {
+  & h2 {
     color: white;
   }
   z-index: 5;
+}
+
+.logo {
+  display: none;
 }
 
 .spacer {

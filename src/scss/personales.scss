@@ -4,8 +4,7 @@
 }
 
 .question {
-  font-size: 2rem;
-  font-family: "Dancing Script", cursive;
+  font-family: "Quicksand", cursive;
   margin-bottom: 1rem;
 }
 
@@ -26,10 +25,7 @@
 
 blockquote {
   padding: 1rem;
-  background: linear-gradient(var(--third), var(--secondary-alt));
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-color: var(--fourth);
   position: relative;
   &::before {
     content: "";

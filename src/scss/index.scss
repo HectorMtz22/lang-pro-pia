@@ -14,6 +14,7 @@
   --secondary-back: #a8635b;
   --third: #00a8ff;
   --third-alt: #0097e6;
+  --fourth: #a3780f;
   --surface: #002233;
 }
 
@@ -21,6 +22,12 @@ body {
   background-color: var(--primary-back);
   -webkit-font-smoothing: antialised;
   text-rendering: optimizeSpeed;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: "Quicksand", sans-serif;
+  }
 }
 
 img {
@@ -83,3 +90,8 @@ i {
 @import "sidebar";
 @import "footer";
 @import "navigation";
+
+.heading {
+  text-align: center;
+  padding: 1rem;
+}
