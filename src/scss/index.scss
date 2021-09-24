@@ -46,57 +46,8 @@ $paddingGlobal: $paddingVertical $paddingHorizontal;
 
 $transition: all 300ms ease;
 
-.wrapper {
-  display: flex;
-  height: 100vh;
-  color: white;
-  & .container {
-    width: 75ch;
-    margin: 3rem auto;
-    padding: 1rem;
-    transition: $transition;
-    & main {
-      align-items: center;
-    }
-  }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 2rem;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.toggleInvisible {
-  transform: translateX(-100%);
-}
-
-.center {
-  transform: translateX(-12.5vw);
-}
-
-.invisible {
-  display: none;
-}
-
-i {
-  transition: $transition;
-  &:hover {
-    transform: scale(1.5);
-  }
-}
-
 @import "header";
 @import "sidebar";
 @import "footer";
 @import "navigation";
-
-.heading {
-  text-align: center;
-  padding: 1rem;
-}
+@import "main";
