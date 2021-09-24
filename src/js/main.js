@@ -1,4 +1,5 @@
-// const main = document.querySelector(".sidebar");
+const sidebar = document.querySelector(".sidebar");
+const containers = document.querySelectorAll(".container");
 // const divs = document.querySelectorAll(".sidebar div");
 
 // const CONSTANTS = {
@@ -6,9 +7,9 @@
 //   tareas: "Tareas",
 // };
 
-// const toggle = (element, className) => {
-//   element.classList.toggle(className);
-// };
+const toggle = (element, className) => {
+  element.classList.toggle(className);
+};
 
 // // const toggleInvisible = (event) => {
 // //   const texto = event.srcElement.innerText.trim();
@@ -26,3 +27,12 @@
 // // };
 
 // // main.addEventListener("click", toggleInvisible);
+
+const menu = document.getElementById("menu");
+
+menu.addEventListener("click", () => {
+  toggle(sidebar, "toggleInvisible");
+  containers.forEach((container) => {
+    toggle(container, "center");
+  });
+});
