@@ -13,17 +13,23 @@ header .menu {
   position: relative;
   & i {
     color: white;
-    cursor: pointer;
+    transition: $transition;
   }
   & input {
-    display: block;
+    cursor: pointer;
     position: absolute;
+    transform: scale(3);
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    opacity: 0;
     z-index: 5;
   }
+}
+
+.menu_icon {
+  transition: $transition;
 }
 
 .spacer {
@@ -47,4 +53,8 @@ header .menu {
       display: none;
     }
   }
+}
+
+.menu_checked {
+  transform: rotate(270deg);
 }
