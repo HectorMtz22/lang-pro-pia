@@ -52,7 +52,8 @@ a {
   .wrapper .container {
     width: 95%;
     max-width: 700px;
-    margin: 3rem auto; }
+    margin: 3rem auto;
+    transition: all 300ms ease; }
     .wrapper .container main {
       align-items: center; }
 
@@ -66,8 +67,10 @@ a {
   flex-direction: column; }
 
 .toggleInvisible {
-  transition: all 300ms ease;
   transform: translateX(-100%); }
+
+.center {
+  transform: translateX(-12.5vw); }
 
 .invisible {
   display: none; }
@@ -79,18 +82,31 @@ i {
 
 header {
   display: grid;
-  grid-template-columns: 200px 4fr 200px;
+  grid-template-columns: 50px 4fr 200px;
   align-items: center;
   padding: 5px 5%;
-  height: 3rem;
-  z-index: 5; }
-  header section {
-    grid-column: 1/-1; }
+  height: 3rem; }
   header h2 {
     color: white; }
 
-.logo {
-  display: none; }
+header .menu {
+  position: relative; }
+  header .menu i {
+    color: white;
+    transition: all 300ms ease; }
+  header .menu input {
+    cursor: pointer;
+    position: absolute;
+    transform: scale(3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 5; }
+
+.menu_icon {
+  transition: all 300ms ease; }
 
 .spacer {
   width: 100%;
@@ -110,6 +126,9 @@ header {
     header .logo {
       display: none; } }
 
+.menu_checked {
+  transform: rotate(270deg); }
+
 .sidebar {
   color: white;
   position: sticky;
@@ -117,7 +136,8 @@ header {
   left: 0;
   bottom: 0;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: all 300ms ease; }
   .sidebar main,
   .sidebar section {
     margin: 10px auto;
@@ -170,6 +190,7 @@ header {
   padding: 1rem; }
 
 @media screen and (max-width: 780px) {
+  .menu,
   .sidebar {
     display: none; } }
 
