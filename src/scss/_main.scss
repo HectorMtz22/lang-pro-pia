@@ -5,6 +5,7 @@
 }
 
 .container {
+  align-self: flex-start;
   font-size: 1.2em;
   text-align: justify;
   width: 75ch;
@@ -14,6 +15,18 @@
   & main {
     align-items: center;
   }
+}
+
+.profile {
+  border-radius: 10px;
+}
+
+.container__filled {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #ca54e855;
+  backdrop-filter: blur(8px);
+  align-items: center;
 }
 
 .grid {

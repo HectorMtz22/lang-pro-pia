@@ -6,6 +6,26 @@
     sans-serif;
 }
 
+html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 1px solid var(--scrollbarBG);
+}
+
 :root {
   --primary: #192a56;
   --primary-back: #192a56;
@@ -20,9 +40,22 @@
 }
 
 body {
-  background-color: var(--primary-back);
+  background: var(--primary-back);
   -webkit-font-smoothing: antialised;
   text-rendering: optimizeSpeed;
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(200deg, var(--primary), var(--third));
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.4;
+  }
 }
 
 @for $i from 1 through 6 {

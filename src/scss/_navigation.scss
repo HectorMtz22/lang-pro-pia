@@ -1,9 +1,9 @@
 .navigation {
-  width: 150px;
+  width: 160px;
   display: flex;
   position: fixed;
-  right: 2rem;
-  bottom: 2rem;
+  right: 3rem;
+  bottom: 3rem;
   justify-content: space-between;
   & a {
     background-color: var(--secondary);
