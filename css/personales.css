@@ -18,6 +18,16 @@
 .img_169 {
   aspect-ratio: 16/9; }
 
+.left {
+  width: 200px;
+  margin-right: 1rem;
+  float: left; }
+
+.right {
+  width: 200px;
+  margin-left: 1rem;
+  float: right; }
+
 blockquote {
   padding: 1rem;
   background-color: var(--fourth);
