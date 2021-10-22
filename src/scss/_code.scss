@@ -1,6 +1,5 @@
 pre,
 code {
-  font-family: monospace;
   display: block;
   background: none;
   white-space: pre;
@@ -23,10 +22,12 @@ code p::before {
 }
 
 code p {
-  font-family: monospace;
+  font-family: "Anonymous Pro", monospace;
+  line-height: 1.15;
 }
 
 .code {
+  border-radius: $borderRadius;
   background-color: var(--surface);
   padding: 1rem;
   & h3 {
