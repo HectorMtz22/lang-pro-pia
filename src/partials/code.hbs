@@ -1,8 +1,18 @@
-<iframe
-  src="https://codesandbox.io/embed/sharp-fire-ujbww?autoresize=1&fontsize=14&hidenavigation=1&initialpath=%2Fsrc%2Fjava&module=%2Fsrc%2Fjava%2F{{archive}}&moduleview=1&theme=dark&view=editor"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  title="PIA de FIME"
-  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+<script type="module" async>
+  const block = document.querySelector("#code");
+  const path = 'tareas/';
+  let name = path + "{{archive}}"; 
+  const text = await fetch(name)
+    .then(response => response.text())
+  
+  let lines = text.split('\n');
 
-<!-- allow="encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" -->
+  for (let i = 0; i < lines.length; i++) {
+    block.innerHTML += `<p>${lines[i]}</p>`;
+  }
+  
+</script>
+<section class="code">
+  <h3>{{archive}}</h3>
+  <code id="code"></code>
+</section>

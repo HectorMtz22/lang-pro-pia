@@ -1,0 +1,36 @@
+pre,
+code {
+  display: block;
+  background: none;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 0;
+  counter-reset: line;
+}
+
+code p::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  color: #888;
+}
+
+code p {
+  font-family: "Anonymous Pro", monospace;
+  line-height: 1.15;
+}
+
+.code {
+  border-radius: $borderRadius;
+  background-color: var(--surface);
+  padding: 1rem;
+  & h3 {
+    margin-bottom: 0.5rem;
+  }
+}
