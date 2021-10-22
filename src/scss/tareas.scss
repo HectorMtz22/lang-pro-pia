@@ -1,0 +1,35 @@
+.container__filled {
+  h2 {
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    color: var(--third);
+    text-shadow: 5px 5px 5px var(--primary);
+  }
+
+  h4 {
+    color: var(--third-alt);
+    text-shadow: 5px 5px 5px var(--primary);
+  }
+
+  section {
+    padding: 1rem;
+    border-top: 2px solid var(--primary);
+  }
+
+  p {
+    margin: 1rem 0.5rem;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--third-alt);
+    text-shadow: 5px 5px 5px var(--primary);
+    transition: all 200ms ease;
+    &:hover {
+      color: rgb(189, 40, 40);
+    }
+  }
+}
