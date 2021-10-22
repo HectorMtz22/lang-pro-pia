@@ -89,34 +89,46 @@
           <section><a href="contacto">Contacto</a></section>
         </aside>        <main class="container">
           <main class="container__filled">
-        
           <h2>Tarea 1</h2>
           <section>
-            <h3>¿Qué es un paradigma</h3>
-        
+            <h3>¿Qué es un paradigma?</h3>
+            <p>
+              Un paradigma es equivalente a un mapa. Por ejemplo si quieres llegar de un punto "A" a un punto "B" tendrás múltiples caminos, algunos más lentos otros más rápidos pero al final todos te llevarán a tu destino. 
+            </p>
+            <p>
+              En el mundo de la programación los paradigmas son esos estilos documentados para programar, cada estilo es diferente, tienen sus ventajas y desventajas pero todos obtienen el mismo resultado.
+            </p>
           </section>
           <section>
             <h3>¿Cuáles son los Paradigmas de los Lenguajes de Programación?</h3>
+            <h4>Imperativa</h4>
+            <p>Es aquella que nos dice lo que vamos a hacer paso por paso, como si siguiéramos la receta para prepara nuestra comida favorita. Es decir tú en el código vas describiendo paso por paso todo lo que hará tu programa.</p>
+        
+            <h4>Declarativa</h4>
+            <p>Es una programación en la que tú le dices al programa lo que tiene que hacer, no sabes como funciona por detrás pero el programa lo hace. Por ejemplo cuando haces la consulta de ventas en tu tienda del mes marzo en SQL, no sabes que hizo el programa para traerte esos datos pero los trajo, y es por que por debajo ya existen métodos y funciones que lo hacen.</p>
+        
+            <h4>Programación Orientada a Objetos</h4>
+            <p>
+              Los objetos permiten representar los conceptos esenciales de una entidad ignorando sus propiedades accidentales. 
+              La organización de los programas está representados la interacción de las cosas del mundo real. 
+              Los objetos interactúan entre sí por medio de mensajes.
+            </p>
+        
+            <h4>Programación Funcional</h4>
+            <p>
+              Este tipo de programación también divide al sistema en varios pedazos, cada pedazo (función) hace una sola cosa como multiplicar un número, solicitar un dato, etc.
+            </p>
+        
+            <h4>Programación Reactiva</h4>
+            <p>
+              En la programación reactiva observamos cambios en un flujo de datos, por ejemplo un chat en vivo que recibe cientos de comentarios por segundo, o Uber con los clientes y carros, etc.
+            </p>
           </section>
+          <section>
+            <h2>Bibliografía</h2>
+            <a href="https://ed.team/blog/que-son-los-paradigmas-de-programacion-cf5554db-9498-475e-b281-981c4fa0f841/" target="_blank" rel="noopener noreferrer">https://ed.team/blog/que-son-los-paradigmas-de-programacion-cf5554db-9498-475e-b281-981c4fa0f841/</a>    <a href="http://www.fdi.ucm.es/profesor/jpavon/poo/01conceptosoo.pdf" target="_blank" rel="noopener noreferrer">http://www.fdi.ucm.es/profesor/jpavon/poo/01conceptosoo.pdf</a>  </section>
           </main>
-          <script type="module" async>
-            const block = document.querySelector("#code");
-            const path = 'tareas/';
-            let name = path + "Hello.java"; 
-            const text = await fetch(name)
-              .then(response => response.text())
-            
-            let lines = text.split('\n');
-          
-            for (let i = 0; i < lines.length; i++) {
-              block.innerHTML += `<p>${lines[i]}</p>`;
-            }
-            
-          </script>
-          <section class="code">
-            <h3>Hello.java</h3>
-            <code id="code"></code>
-          </section></main>
+        </main>
         <nav class="navigation">
           <a href=tareas.html><i class="fas fa-arrow-left"></i></a>
           <a href="index.html"><i class="fas fa-home"></i></a>

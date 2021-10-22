@@ -1,0 +1,26 @@
+.container__filled h2 {
+  padding-bottom: 0.5rem; }
+
+.container__filled h3 {
+  color: var(--third);
+  text-shadow: 5px 5px 5px var(--primary); }
+
+.container__filled h4 {
+  color: var(--third-alt);
+  text-shadow: 5px 5px 5px var(--primary); }
+
+.container__filled section {
+  padding: 1rem;
+  border-top: 2px solid var(--primary); }
+
+.container__filled p {
+  margin: 1rem 0.5rem; }
+
+.container__filled a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--third-alt);
+  text-shadow: 5px 5px 5px var(--primary);
+  transition: all 200ms ease; }
+  .container__filled a:hover {
+    color: #bd2828; }
