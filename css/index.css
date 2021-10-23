@@ -94,7 +94,11 @@ h6 {
   font-family: "Quicksand", sans-serif; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  cursor: pointer;
+  transition: all 300ms ease; }
+  img:hover {
+    filter: brightness(0.4) blur(1px); }
 
 a {
   text-decoration: none;
@@ -265,7 +269,8 @@ footer {
   border-radius: 4px;
   background-color: #ca54e855;
   backdrop-filter: blur(8px);
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 10rem; }
 
 .grid {
   display: grid;
