@@ -327,3 +327,7 @@ code p {
   padding: 1rem; }
   .code h3 {
     margin-bottom: 0.5rem; }
+
+ul {
+  padding: 0.5rem 1rem;
+  list-style-position: inside; }
