@@ -106,3 +106,8 @@ a {
 @import "navigation";
 @import "main";
 @import "code";
+
+ul {
+  padding: 0.5rem 1rem;
+  list-style-position: inside;
+}
