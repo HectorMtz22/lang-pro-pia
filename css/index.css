@@ -331,3 +331,23 @@ code p {
 ul {
   padding: 0.5rem 1rem;
   list-style-position: inside; }
+
+.left {
+  width: 200px;
+  margin-right: 1rem;
+  float: left; }
+
+.right {
+  width: 200px;
+  margin-left: 1rem;
+  float: right; }
+
+.question {
+  font-family: "Quicksand", cursive;
+  margin-bottom: 1rem; }
+
+blockquote {
+  padding: 1rem;
+  background-color: var(--fourth);
+  position: relative;
+  border-left: 5px solid var(--fourth-back); }
