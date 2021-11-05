@@ -107,7 +107,8 @@ a {
 @import "main";
 @import "code";
 
-ul {
+ul,
+ol {
   padding: 0.5rem 1rem;
   list-style-position: inside;
 }
