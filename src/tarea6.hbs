@@ -1,15 +1,179 @@
 {{#> layout stylesheet='tareas'}}
 <main class="container">
   <main class="container__filled">
-  <h2>Tarea 3</h2>
+  <h2>Tarea 6: Python</h2>
   <section>
-    <h3>Lorem</h3>
+    <h3>Símbolos</h3>
+    <h4>Operadores Artitméticos</h4>
+    <p>Entre los operadores aritméticos que Python utiliza, podemos encontrar los siguientes:</p>
+    <table class="table">
+      <tr>
+        <th>Símbolo</th>
+        <th>Significado</th>
+      </tr>
+      <tr>
+        <th>+</th>
+        <td>Suma</td>
+      </tr>
+      <tr>
+        <th>-</th>
+        <td>Resta</td>
+      </tr>
+      <tr>
+        <th>-</th>
+        <td>Negación</td>
+      </tr>
+      <tr>
+        <th>*</th>
+        <td>Multiplicación</td>
+      </tr>
+      <tr>
+        <th>**</th>
+        <td>Exponente</td>
+      </tr>
+      <tr>
+        <th>/</th>
+        <td>División</td>
+      </tr>
+      <tr>
+        <th>//</th>
+        <td>División entera</td>
+      </tr>
+      <tr>
+        <th>%</th>
+        <td>Módulo</td>
+      </tr>
+    </table>
+    <h4>Tipos de dato</h4>
+    <p>Cadena de texto (string):</p>
+    <code class="code">
+      mi_cadena = "Hola Mundo!"
+    </code>
+    <code class="code">
+      mi_cadena_multilinea = """<br />
+      Esta es una cadena<br />
+      de varias lineas<br />
+      """
+    </code>
+    <p>
+      Número entero:
+    </p>
+    <code class="code">
+      edad = 35
+    </code>
+    <p>
+      Número entero octal:
+    </p>
+    <code class="code">
+      edad = 043
+    </code>
+    <p>
+      Número entero hexadecimal:
+    </p>
+    <code class="code">
+      edad = 0x23
+    </code>
+    <p>
+      Número real:
+    </p>
+    <code class="code">
+      precio = 7435.28
+    </code>
+    <p>
+      Booleano (verdadero / Falso):
+    </p>
+    <code class="code">
+      verdadero = True<br />
+      falso = False
+    </code>
   </section>
   <section>
-    <h2>Bibliografía</h2>
-    {{> link link='https://sites.google.com/site/portafoliodigitalguillermina/tema-1-fundamentos-de-programacion/1-2-clasificacion-de-los-tipos-de-lenguajes-de-programacion' }}
+    <h3>Sintaxis</h3>
+    <p>Variables: Una variable es un espacio para almacenar datos modificables, en la memoria de un ordenador. En Python, una variable se define con la sintaxis:</p>
+    <code class="code">
+      nombre_de_la_variable = valor_de_la_variable
+    </code>
+    <p>Constantes: Se utilzan nombres descriptivos en mayúsculas</p>
+    <code class="code">
+      MI_CONSTANTE = 12
+    </code>
+
+    <p>Comentarios: Un archivo, no solo puede contener código fuente. También puede incluir comentarios (notas que como programadores, indicamos en el código para poder comprenderlo mejor).</p>
+    <p>Los comentarios pueden ser de dos tipos: de una sola línea o multi-línea y se expresan de la siguiente manera:</p>
+
+    <code class="code">
+      <p># Esto es un comentario de una sola línea</p>
+      <p>mi_variable = 15</p>
+      <p>"""Y este es un comentario</p>
+      <p>de varias líneas"""</p>
+      <p>mi_variable = 15</p>
+      <p>mi_variable = 15 # Este comentario es de una línea también</p>
+    </code>
+  </section>
+  <section>
+    <h3>Esqueleto</h3>
+    <p>
+      En este lenguaje de programación no se necesita un código de inicio para iniciar, si no que con un archivo vacío .py puedes empezar 
+      a poner tu código sin más
+    </p>
+    <p>
+      Si necesitas librerías externas, u otro archivo, se puede importar con:
+    </p>
+    <code class="code">
+      from archive import utility
+    </code>
+  </section>
+  <section>
+    <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      Normalmente en Linux viene instalado por defecto, dependiendo de la distro. Se puede descargar el ejecutable de Windows, Mac Os 
+      y Linux en: {{> link link='https://www.python.org/downloads/' }}
+    </p>
+    <p>Por defecto puedes utilizar el comando <code class="code">python</code> en Windows y <code class="code">python3</code> en sistemas UNIX</p>
+    <p>Adicionalmente te proporciona una interfaz gráfica que es una consola a la que puedes escribir código python llamado: <code class="code">IDLE</code></p>
+    <p>Con el ejecutable puedes interpretar los archivos con tu código</p>
+  </section>
+  <section>
+    <h3>Paradigmas de Python</h3>
+    <p>Python es un lenguaje de programación de alto nivel, interpretado, multiparadigma, dinámico y fuertemente tipado, creado en 1991 por el programador holandés Guido van Rossum, basado en un fuerte énfasis en la simplicidad y legibilidad del código, para así hacer posible el desarrollo rápido de aplicaciones.</p>
+  </section>
+  </main>
+  <code class="code">
+    <h3>Conversor de decimales a otra base</h3>
+    <p>print("CONVERSOR DE DECIMALES A OTRA BASE")</p>
+    <p>number = input("Ingresa un numero de base decimal: ") </p>
+    <p>base = input("Ingresa la base: ")</p>
+    <p>numbers = []</p>
+    <p></p>
+    <p>def residuo(number, base, iteration = 0):</p>
+    <p>    cociente = number // base</p>
+    <p>    res = number % base</p>
+    <p>    print("  " * iteration, res, cociente)</p>
+    <p>    numbers.append(res)</p>
+    <p></p>
+    <p>    if (cociente < base): </p>
+    <p>        numbers.append(cociente)</p>
+    <p>        return</p>
+    <p>    else:</p>
+    <p>        return residuo(cociente, base, iteration + 1)</p>
+    <p></p>
+    <p>base = int(base)</p>
+    <p>residuo(int(number), base)</p>
+    <p></p>
+    <p>print("El resultante base", base, "es: ", end='')</p>
+    <p>for i in range(len(numbers) - 1, -1, -1):</p>
+    <p>    print(numbers[i], end='')</p>
+    <p></p>
+    <p>print()</p>
+    <p></p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='https://uniwebsidad.com/libros/python/capitulo-2/elementos-del-lenguaje' }}
+    {{> link link='https://czayas.gitbooks.io/paradigmas-de-la-programacion-con-python/content/a1-python.html' }}
   </section>
   </main>
 </main>
-{{> nav prevHref='tarea1.html' nextHref='tarea3.html' }}
+{{> nav prevHref='tarea5.html' nextHref='tarea7.html' }}
 {{/layout}}
