@@ -6,13 +6,139 @@
     <h3>ProLog</h3>
   </section>
   <section>
-    <h4>Símbolos</h4>
+    <h4>Símbolos, Sintaxis</h4>
+    <p>
+      Prolog es un lenguaje de programación basado en el lenguaje de la lógica de predicados. Veamos aquí, con un sencillo ejemplo, la idea básica del lenguaje. El ejemplo será el del mundo de los bloques.
+    </p>
+    <p>
+      Las sentencias de Prolog son cláusulas de Horn escritas con una sintaxis propia. Entre otras cosas, la sintaxis de Prolog difiere de la que venimos utilizando en que las constantes se escriben con minúscula c(o empezando con minúsula) y las variables con mayúscula (o empezando con mayúscula). Hay tres tipos de sentencias:
+    </p>
+    <p>
+      Los hechos son cláusulas determinadas con un solo literal en el que únicamente figuran constantes. En el ejemplo:
+    </p>
+    <ul>
+      <li>sobre(a,b).</li>
+      <li>sobre(b,c).</li> 
+      <li>sobre(d,e).</li>
+    </ul>
+    <p>
+      Las reglas son cláusulas determinadas con al menos un literal negativo. La cláusula:
+    </p>
+    <code>¬p1(x,y...)  \/ ¬p2(x,y...)  \/  ...  \/  q(x,y...)  =_  p1(x,y...)  /\  p2(x,y...)... ==> q(x,y...)</code>
+    <p>se escribe con la sintaxis:</p>
+    <code>q(X,Y...) :- p1(X,Y...),p2(X,Y...).</code>
+    <h4>Símbolos Aritméticos</h4>
+    <p>
+      Todas las versiones de Prolog soportan los siguientes operadores aritméticos, listados en el orden de prioridad de ejecución.
+    </p>
+    <ul>
+      <li>+ --> Suma</li>
+      <li>- --> Resta</li>
+      <li>* --> Multiplicación</li>
+      <li>/ --> División</li>
+      <li>// --> División Entera</li>
+      <li>MOD --> Residuo</li>
+      <li>^ --> Potencia</li>
+    </ul>
+    <h4>Símbolos Relacionales</h4>
+    <p>
+      Prolog soporta los siguientes operadores relacionales:
+    </p>
+    <ul>
+      <li>= --> Igual qué</li>
+      <li>> --> Mayor qué</li>
+      <li>>= --> Mayor o igual qué</li>
+      <li>>= --> Menor o igual qué</li>
+      <li><> --> Desigual qué</li>
+      <li>=/= --> Diferente qué</li>
+      <li>is --> Evaluador de expresión</li>
+      <li>seed --> Generador de números aleatorios</li>
+    </ul>
   </section>
+
   <section>
-    <h2>Bibliografía</h2>
-    {{> link link='https://sites.google.com/site/portafoliodigitalguillermina/tema-1-fundamentos-de-programacion/1-2-clasificacion-de-los-tipos-de-lenguajes-de-programacion' }}
+    <h4>Esqueleto de los programas</h4>
+    <p>
+      El hecho de programar en ProLog consiste en dar al ordenador un Universo finito en forma de hechos y reglas, proporcionando los medios para realizar inferencias de un hecho a otro. La programación en ProLog consiste en:
+    </p>
+    <ul>
+      <li>Declarar algunos HECHOS sobre los objetos y sus relaciones.</li>
+      <li>Definir algunas REGLAS sobre los objetos y sus relaciones, y</li>
+      <li>Hacer PREGUNTAS sobre los objetos y sus relaciones.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Aplicación para descargar</h3>
+    <p>
+      En Linux y Sistemas Operativos basados en UNIX, normalmente viene instalado como <code class="code">swipl</code>Este comando nos sirve 
+      para correr una instancia de este programa, que se encarga de leer la consola para ejecutar los comandos.
+    </p>
+    <p>
+      También con este comando puedes ejecutar un programa .pl pasandolo como argumento.
+    </p>
+    <code class="code">
+      <p>$ swipl likes.pl</p>
+      <p>Welcome to SWI-Prolog ...</p>
+      <p>...</p>
+      <p>1 ?-</p>
+    </code>
+    <p>
+      En Windows también está instalado, por lo que puedes encontrar un <code class="code">swipl-win.exe</code> y ejecutarlo. También normalmente 
+      está asociado la extensión .pl, el cual lo puedes abrir en el Explorador directamente con Prolog.
+    </p>
+  </section>
+
+  <section>
+    <h3>Tipo de paradigma que pertenece</h3>
+    <p>
+      La programación lógica es una variedad de lo que conocemos con programación declarativa, un paradigma opuesto a prácticamente todos los lenguajes de programación populares, desde ensamblador a Python pasando por BASIC, C o Java, a los que agrupamos en la categoría de la programación imperativa.
+    </p>
+    <p>
+      En dichos lenguajes, la labor del programador es establecer cómo se resuelve un problema mediante sentencias. Sin embargo, la programación lógica no gira en torno al cómo, sino al qué: se trabaja de forma descriptiva, estableciendo relaciones entre entidades, lo que obliga a los que los lenguaje tengan un alto nivel de abstracción.
+    </p>
+    <p>
+      Este paradigma se basa en la fórmula "algoritmos = lógica + control" (la llamada Ecuación Informal de Kowalski), lo que significa que un algoritmo se crea especificando conocimiento mediante axiomas (lógica) y el problema se resuelve mediante un mecanismo de inferencia que actúa sobre el mismo (control).
+    </p>
   </section>
   </main>
+  <code class="code">
+    <h3>Ejemplo: Mostrar el abuelo</h3>
+    <p>%% % padre(X,Y): X es padre de Y</p>
+    <p></p>
+    <p>padre(luis,ana).</p>
+    <p>padre(juan,luis).</p>
+    <p></p>
+    <p>%% % abuelo(X,Y): X es abuelo de Y</p>
+    <p></p>
+    <p>abuelo(X,Y) :-</p>
+    <p>     padre(X,Z), padre(Z,Y)</p>
+  </code>
+  <code class="code">
+    <h3>Cargando el archivo</h3>
+    <p>?- [abuelo].</p>
+    <p>true.</p>
+  </code>
+  <code class="code">
+    <h3>Una vez cargado el programa</h3>
+    <p>?- padre(luis,ana).</p>
+    <p>true.</p>
+    <p></p>
+    <p>?- padre(luis,X).</p>
+    <p>X = ana.</p>
+    <p>?- abuelo(X,ana).</p>
+    <p>X = juan.</p>
+  </code>
+
+  <main class="container__filled">
+    <h2>Bibliografía</h2>
+    <section>
+      {{> link link='https://www.swi-prolog.org/pldoc/man?section=quickstart' }}
+      {{> link link='https://www.ecured.cu/ProLog' }}
+      {{> link link='https://www.genbeta.com/desarrollo/lenguaje-prolog-ejemplo-paradigma-programacion-logica' }}
+      {{!-- {{> link link='https://www.uv.mx/personal/aguerra/files/2020/09/pia-03.pdf' }} --}}
+    </section>
+  </main>
 </main>
-{{> nav prevHref='tarea1.html' nextHref='tarea3.html' }}
+{{> nav prevHref='tarea4.html' nextHref='tarea6.html' }}
 {{/layout}}
