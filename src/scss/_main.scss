@@ -13,6 +13,7 @@
   margin: 3rem auto;
   padding: 1rem;
   transition: $transition;
+  padding-bottom: 10rem;
   & main {
     align-items: center;
   }
@@ -29,7 +30,6 @@
   background-color: #ca54e855;
   backdrop-filter: blur(8px);
   align-items: center;
-  margin-bottom: 10rem;
 }
 
 .grid {

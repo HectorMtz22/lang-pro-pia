@@ -2,13 +2,14 @@ pre,
 code {
   display: block;
   background: none;
-  white-space: pre;
+  // white-space: pre;
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   max-width: 100%;
   min-width: 100px;
   padding: 0;
   counter-reset: line;
+  font-family: "Anonymous Pro", monospace;
 }
 
 code p::before {
