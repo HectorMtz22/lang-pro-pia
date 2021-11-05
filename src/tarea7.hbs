@@ -2,29 +2,120 @@
 <main class="container">
   <main class="container__filled">
   <h2>Tarea 7: Scheme</h2>
+  <p>
+    Scheme es un lenguaje de programación que surgió en los laboratorios del MIT en 1975, cuando Guy L. Steele y Gerarld J. Sussman buscaban un lenguaje con una semántica muy clara y sencilla. Pensaban que los lenguajes no se deberían desarrollar añadiendo muchas características, sino quitando las debilidades y las limitaciones que hacen que las características adicionales parezcan necesarias. Scheme es un dialecto de Lisp, es un lenguaje interpretado, muy expresivo y soporta varios paradigmas. Estuvo influenciado por el cálculo lambda. 
+  </p>
+  <p> 
+    El desarrollo de Scheme ha sido lento, ya que la gente que estandarizó Scheme es muy conservadora en cuanto a añadirle nuevas características,porque la calidad ha sido siempre más importante que la utilidad empresarial. Por eso Scheme es considerado como uno de los lenguajes mejor diseñados de propósito general. Aprender Scheme hará que seais mejores programadores cuando utiliceis otros lenguajes de programación.
+  </p>
   <section>
     <h3>Símbolos</h3>
+    <p>
+      Un símbolo es lo que en otros lenguajes se denomina identificador. En Scheme los símbolos e identificadores pueden contener caracteres internacionales (Unicode, UTF-8). El intérprete DrScheme guarda los ficheros de texto en esa codificación.
+    </p>
+    <code class="code">
+      <p>'hola</p>
+      <p>(symbol 'hola-que<>)</p>
+      <p>(symbol->string 'hola-que<>)</p>
+      <p>'mañana</p>
+      <p>'lápiz ; aunque sea posible, no vamos a usar acentos en los símbolos</p>
+      <p>; pero sí en los comentarios</p>
+      <p>(symbol? 'hola) ; #t</p>
+      <p>(symbol? "hola") ; #f</p>
+      <p>(symbol?  #f) ; #f</p>
+      <p>(equal? 'hola 'hola)</p>
+      <p>(equal? 'hola "hola")</p>
+      <p></p>
+    </code>
   </section>
   <section>
     <h3>Sintaxis</h3>
+    <p>
+      Las expresiones en Scheme tienen una forma denominada notación prefija de Cambridge (Cambridge prefix notation) (el nombre de Cambridge es por la localidad Cambridge, Massachusets, donde reside el MIT, lugar en el que se ideó el Lisp), en la que la expresión está delimitada por paréntesis y el operando va seguido de los operadores. La sintaxis es la siguiente:
+    </p>
+    <code class="code">
+      (&lt;función> &lt;arg1> ... &lt;argn>)
+    </code>
+    <p>
+      En Scheme podemos interpretar los paréntesis abiertos '(' como evaluadores o lanzadores de la función que hay a continuación. La forma de evaluar una expresión en Scheme es muy sencilla:
+    </p>
+    <ol>
+      <li>Evaluar cada uno de los argumentos.</li>
+      <li>Aplicar la función nombrada tras el paréntesis a los valores resultantes de la evaluación anterior.</li>
+    </ol>
+    <h4>Operaciones sobre números</h4>
+    <code class="code">
+      <p>(number? 1)</p>
+      <p>(integer? 2.3)</p>
+      <p>(integer? 4.0)</p>
+      <p>(real? 1)</p>
+      <p>(positive? -4)</p>
+      <p>(negative? -4)</p>
+      <p>(zero? 0.2)</p>
+      <p>(infinite? 2.0)</p>
+      <p>(finite? +inf.0)</p>
+      <p>(even? 2)</p>
+      <p>(odd? 3)</p>
+      <p>(exact? 5) </p>
+      <p>(inexact? +inf.0) </p>
+    </code>
   </section>
   <section>
     <h3>Esqueleto</h3>
+    <p>
+      Este lenguaje no necesita un esqueleto en específico en nuestro archivo para poder funcionar, si no que directamente podemos empezar a 
+      definir funciones para nuestro programa.
+    </p>
   </section>
   <section>
     <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      Normalmente está instalado en cualquier distribución Linux, y en Mac OS (Intel). No se proporciona para windows, aunque puede 
+      instalarse en el Windows Subsystem for Linux (WSL).
+    </p>
+    <p>
+      Mac OS Apple Sillicon aún no está soportado poe el momento.
+    </p>
+    {{> link link='https://www.gnu.org/software/mit-scheme/' }}
   </section>
   <section>
     <h3>Tipo de paradigma</h3>
+    <p>El paradigma de este lenguaje es funcional como lo vimos anteriormente.</p>
+    <code class="code">
+      <p>(display "Hola elige alguna función")</p>
+      <p>(display "Raiz, suma, cuadrado, potencia o resta")</p>
+      <p>(define(raiz X)(sqrt X))</p>
+      <p>(define(cuadrado X)(* X X))</p>
+      <p>(define(suma X Y)(+ X Y))</p>
+      <p>(define(potencia X Y)(expt X Y))</p>
+      <p>(define(resta X Y)(- X Y))</p>
+    </code>
   </section>
   </main>
   <code class="code">
-
+    <h3>Ejemplo: Imprimir figura triángulo</h3>
+    <p>(define (T) ;es la figura con la que se ;llenara el triángulo</p>
+    <p>(display "*"))</p>
+    <p></p>
+    <p>(define (dibuje cant) ;esta funcion me dibuja los "*"</p>
+    <p>   (do ((i 0 (+ i 1)))</p>
+    <p>       ((= i cant) )</p>
+    <p>     (t)</p>
+    <p>     (display " ")))</p>
+    <p></p>
+    <p>(define (triangulo) ;y esta es la que me dibuja el triangulo</p>
+    <p>   (do ((i 1 (+ i 1)));observa como se hace el ciclo :D</p>
+    <p>         ((= i 10) )</p>
+    <p>     (dibuje i);llamada a la funcion</p>
+    <p>     (newline)));pasa renglon</p>
   </code>
   <main class="container__filled">
   <section>
     <h2>Bibliografía</h2>
-    {{> link link='' }}
+    {{> link link='https://www.gnu.org/software/mit-scheme/' }}
+    {{> link link='http://www.dccia.ua.es/dccia/inf/asignaturas/LPP/2010-2011/teoria/tema2.html' }}
+    {{> link link='http://www.uco.es/users/ma1fegan/Comunes/asignaturas/pd/Scheme-comandos-graficos.pdf' }}
+    {{> link link='https://ceciliaurbina.blogspot.com/2010/11/scheme.html' }}
   </section>
   </main>
 </main>
