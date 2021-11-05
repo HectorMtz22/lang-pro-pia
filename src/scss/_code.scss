@@ -13,6 +13,8 @@ code {
 }
 
 code p::before {
+  width: 1.4rem;
+  text-align: right;
   counter-increment: line;
   content: counter(line);
   display: inline-block;

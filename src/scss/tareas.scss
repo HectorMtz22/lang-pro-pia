@@ -35,3 +35,14 @@
     }
   }
 }
+
+.table {
+  & td,
+  & th {
+    padding: 0.1rem 1rem;
+  }
+
+  & th {
+    text-align: center;
+  }
+}
