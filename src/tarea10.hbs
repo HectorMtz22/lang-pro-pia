@@ -1,0 +1,82 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 10: Gödel</h2>
+  <section>
+    <h3>Símbolos</h3>
+    <p>
+      Está basado en módulos (que aceptan polimorfismo) y en tipos de datos (soporta
+      enteros y racionales con una precisión infinita, y número en coma flotante) y tiene una
+      amplia librería de módulos predefinidos.
+      Es un buen lenguaje para tareas de meta-programación, tales como compilación,
+      depuración, análisis, verificación o transformación de programas, ya que es mucho más
+      declarativo que Prolog, por ejemplo. 
+    </p>
+  </section>
+  <section>
+    <h3>Sintaxis</h3>
+    <p>
+      Utiliza ciertas palabras reservadas como 'MODULE', 'IMPORT' y 'PREDICATE' en mayúsculas
+    </p>
+    <img src="img/tarea10.png" alt="Funcionamiento del lenguaje">
+  </section>
+  <section>
+    <h3>Esqueleto</h3>
+    <p>Se compone por varios statements entre los cuales se identifican:</p>
+    <ul>
+      <li>Program</li>
+      <li>Module</li>
+      <li>Export Part</li>
+      <li>Local Part</li>
+      <li>Module Name</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      Este lenguaje está hecho con propósitos educativos de la Universidad de Briston. Puedes leer más acerca de ello en el siguiente link:
+    </p>
+    {{> link link='https://web.archive.org/web/20050304094122/http://www.cs.bris.ac.uk/~bowers/goedel.html' }}
+  </section>
+  <section>
+    <h3>Tipo de paradigma</h3>
+    <p>
+      Gödel es un lenguaje de programación declarativo, de propósito general, adherido al paradigma de la programación lógica.
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <h3>Fibonacci en Godel</h3>
+    <p>MODULE Fibonacci.</p>
+    <p>IMPORT Integers.</p>
+    <p>PREDICATE Fib : Integer * Integer.</p>
+    <p>% Fib(k,n) <-> n is the Fibonacci number F_{k} of rank k.</p>
+    <p>Fib(0,0).</p>
+    <p>Fib(1,1).</p>
+    <p>Fib(k,n) <-</p>
+    <p>k > 1 &</p>
+    <p>FibIt(k-2,1,1,n).</p>
+    <p>PREDICATE FibIt : Integer * Integer * Integer * Integer.</p>
+    <p>% FibIt(k,f,g,n) <-> n = F_{k} * f + F_{k+1} * g.</p>
+    <p>FibIt(0,_,g,g).</p>
+    <p>FibIt(k,f,g,n) <-</p>
+    <p>k > 0 &</p>
+    <p>g < n &</p>
+    <p>FibIt(k-1,g,f+g,n).</p>
+    <p></p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='https://dennisdarland.com/my_sw_projects/goedel/v1_3_27/doc/book.pdf' }}
+    {{> link link='http://www.it.uc3m.es/jvillena/irc/practicas/estudios/Lenguajes_Logicos.pdf' }}
+    {{> link link='https://amp.es.what-this.com/110423/1/godel-lenguaje-de-programacion.html' }}
+    {{> link link='https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/tutoriales/godel/index.html' }}
+    {{> link link='https://es-academic.com/dic.nsf/eswiki/1295991' }}
+  </section>
+  </main>
+</main>
+{{> nav prevHref='tarea9.html' nextHref='tarea11.html' }}
+{{/layout}}
+
+
