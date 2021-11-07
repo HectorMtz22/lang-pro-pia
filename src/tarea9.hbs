@@ -1,0 +1,142 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 9: R</h2>
+  <p>
+    R es un entorno de software libre (licencia GNU GLP) y lenguaje de programación interpretado, es decir, ejecuta las instrucciones directamente, sin una previa compilación del programa a instrucciones en lenguaje máquina. El término entorno, en R, se refiere a un sistema totalmente planificado y coherente, en lugar de una acumulación de herramientas específicas e inflexibles, como suele ser el caso en otros softwares de análisis de datos.
+  </p>
+  <section>
+    <h3>Símbolos</h3>
+    <p>
+      Operaciones con números reales y complejos
+    </p>
+    <p>
+      R es un lenguaje interpretado, es decir podemos escribir órdenes y R las ejecutará inmediatamente.
+
+      De hecho puede utilizar R como una calculadora, ya que es capaz de manejar todas las operaciones elementales: suma, resta, multiplicación, división y potenciación, que se realizan mediante los símbolos: + , - , * , ^ .
+    </p>
+    <code class="code">
+      # R como calculadora
+      2+3
+    </code>
+    <p>Es importante saber que R no evalúa una expresión hasta que tiene la certeza de que se ha terminado su escritura; por ejemplo, si la expresión comienza con un paréntesis, se debe cerrar la expresión con otro paréntesis, sino R considerará que no terminó la acción, igualmente corchetes, llaves etc. En general, para cualquier función, su escritura sin los paréntesis indican al lenguaje que debe devolver la definición, en tanto que al incluir paréntesis, le indica que intente ejecutarla.</p>
+    <code class="code">
+      15/3
+    </code>
+    <p>
+      Funciones usuales
+    </p>
+    <p>R proporciona las funciones usuales para hacer todo tipo de evaluaciones básicas, tales como: suma, raíz cuadrada, valor absoluto, senos, cosenos, logaritmo natural, exponencial, entre otras</p>
+    <ul>
+      <li>sum( ): Suma de los elementos</li>
+      <li>sqrt( ): Raíz cuadrada.</li>
+      <li>abs( ): Valor absoluto.</li>
+      <li>sin( ), cos( ), …: Funciones trigonométricas.</li>
+      <li>log( ), exp( ): Logaritmo y exponencial.</li>
+      <li>round( ): Redondeo de valores numéricos.</li>
+    </ul>
+    <p>Operadores Comparativos y Lógicos</p>
+    <p>Operadores de Relación:</p>
+    <table class="table">
+      <tr>
+        <th>Símbolo</th>
+        <th>Relación</th>
+      </tr>
+      <tr>
+        <th><</th>
+        <td>Mayor qué</td>
+      </tr>
+      <tr>
+        <th>></th>
+        <td>Mayor qué</td>
+      </tr>
+      <tr>
+        <th>>=</th>
+        <td>Menor o igual qué</td>
+      </tr>
+      <tr>
+        <th>>=</th>
+        <td>Mayor o igual qué</td>
+      </tr>
+      <tr>
+        <th>=</th>
+        <td>Igual</td>
+      </tr>
+      <tr>
+        <th>!=</th>
+        <td>Diferente</td>
+      </tr>
+    </table>
+    <p>Operadores Lógicos:</p>
+    <table class="table">
+      <tr>
+        <th>Símbolo</th>
+        <th>Lógicos</th>
+      </tr>
+      <tr>
+        <th>!x</th>
+        <td>Negación</td>
+      </tr>
+      <tr>
+        <th>x & y</th>
+        <td>Conjunción</td>
+      </tr>
+      <tr>
+        <th>x && y</th>
+        <td>Igual</td>
+      </tr>
+      <tr>
+        <th>x | y</th>
+        <td>Disyunción</td>
+      </tr>
+      <tr>
+        <th>x || y</th>
+        <td>Igual</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h3>Sintaxis</h3>
+    <p>La sintaxis de R es muy parecida a un lenguaje de programación tradicional:</p>
+    <code class="code">
+      <p># A continuación se crea la función media</p>
+      <p>media<-function(x=NA)</p>
+      <p>{</p>
+      <p>	x<-x[!is.na(x)]</p>
+      <p>	sum(x)/length(x)</p>
+      <p>}</p>
+      <p>media(c(2,4,1,3,6,7))</p>
+      <p></p>
+    </code>
+  </section>
+  <section>
+    <h3>Esqueleto</h3>
+  </section>
+  <section>
+    <h3>Aplicación a descargar para editar y ejecutar</h3>
+  </section>
+  <section>
+    <h3>Tipo de paradigma</h3>
+  </section>
+  </main>
+  <code class="code">
+    <p>#Factorial de un número</p>
+    <p>factorial<-function(n)</p>
+    <p> {</p>
+    <p> f<-1</p>
+    <p> if(n>1)</p>
+    <p> for(i in 1:n)</p>
+    <p> f<-f*i</p>
+    <p> return(f)</p>
+    <p> }</p>
+    <p>factorial(3)</p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='' }}
+  </section>
+  </main>
+</main>
+{{> nav prevHref='tarea8.html' nextHref='tarea10.html' }}
+{{/layout}}
