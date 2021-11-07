@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/tareas.css">
+    <title>PIA</title>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+    
+      <section class="menu">
+        <i class="fas fa-bars menu_icon"></i>
+        <input type="checkbox" name="menu" id="menu" />
+      </section>
+      <nav>
+        <h2>Héctor Martínez</h2>
+      </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="sidebar">
+          <main>
+            <h3>Menú</h3>
+          </main>
+          <section>
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Índice
+            </a>
+          </section>
+          <section>
+            <a href="personales.html">
+              <i class="fas fa-user"></i>
+              Personales
+            </a>
+          </section>
+          <div>
+            <aside>
+              <a href="personal1.html">
+                Biografía
+              </a>
+            </aside>
+            <aside>
+              <a href="personal2.html">
+                Pasatiempo
+              </a>
+            </aside>
+            <aside>
+              <a href="personal3.html">
+                Personaje
+              </a>
+            </aside>
+          </div>
+        
+          <section>
+            <a href="tareas.html">
+              <i class="fas fa-book"></i>
+              Tareas
+            </a>
+          </section>
+          <div>
+            <aside><a href="tarea1.html">Tarea 1</a></aside>
+            <aside><a href="tarea2.html">Tarea 2</a></aside>
+            <aside><a href="tarea3.html">Tarea 3</a></aside>
+            <aside><a href="tarea4.html">Tarea 4</a></aside>
+            <aside><a href="tarea5.html">Tarea 5</a></aside>
+            <aside><a href="tarea6.html">Tarea 6</a></aside>
+            <aside><a href="tarea7.html">Tarea 7</a></aside>
+            <aside><a href="tarea8.html">Tarea 8</a></aside>
+            <aside><a href="tarea9.html">Tarea 9</a></aside>
+            <aside><a href="tarea10.html">Tarea 10</a></aside>
+            <aside><a href="tarea11.html">Tarea 11</a></aside>
+            <aside><a href="tarea12.html">Tarea 12</a></aside>
+            <aside><a href="tarea13.html">Tarea 13</a></aside>
+            <aside><a href="tarea14.html">Tarea 14</a></aside>
+            <aside><a href="tarea15.html">Tarea 15</a></aside>
+            <aside><a href="tarea16.html">Tarea 16</a></aside>
+            <aside><a href="tarea17.html">Tarea 17</a></aside>
+            <aside><a href="tarea18.html">Tarea 18</a></aside>
+            <aside><a href="tarea19.html">Tarea 19</a></aside>
+            <aside><a href="tarea20.html">Tarea 20</a></aside>
+            <aside><a href="tarea21.html">Tarea 21</a></aside>
+            <aside><a href="tarea22.html">Tarea 22</a></aside>
+          </div>
+          <section><a href="contacto">Contacto</a></section>
+        </aside>        <main class="container">
+          <main class="container__filled">
+          <h2>Tarea 8: Haskell</h2>
+          <section>
+            <h3>Símbolos</h3>
+            <p>
+              Hay muy pocos “operadores” predefinidos en
+              Haskell—muchos que parecen estar predefinidos
+              en realidad son sintaxis (e.g. “=”). En lugar de
+              eso, los operadores son simplemente funciones
+              que toman dos argumentos y tienen un soporte
+              sintáctico especial. Cualquier así llamado operador puede ser aplicado como una función prefijo
+              usando paréntesi
+            </p>
+            <code class="code">
+              3 + 4 == (+) 3 4
+            </code>
+            <p>
+              Por supuesto, comparación de patrones, guardas,
+              etc. están disponibles en esta forma. La
+              declaración de tipos es un poco diferentes. El operador “nombre” debe aparecer entre paréntesis:
+            </p>
+            <code class="code">
+              (##) :: String -> String -> String
+            </code>
+            <p>
+              Los símbolos que se permite usar para definir operadores son:
+            </p>
+            <code class="code">
+              # \$ % & * + . / < = > ? @ \ ^ | - ~
+            </code>
+            <p>
+              Sin embargo, hay varios “operadores” que no
+              pueden ser redefinidos. Estos son <-, -> y =. En sí
+              mismos no se les puede asignar nueva funcionalidad, pero pueden ser utilizados como parte de un
+              operador multicaracter. La función “bind”, >>=, es
+              un ejemplo.
+            </p>
+          </section>
+          <section>
+            <h3>Sintaxis</h3>
+            <p>
+              La sintaxis es muy parecida a otros lenguajes funcionales:
+              Puedes hacer artimética con los mismos signos, y comparaciones también como lo vemos en el ejemplo: 
+            </p>
+            <code class="code">
+              <p>-- You have numbers</p>
+              <p>3 -- 3</p>
+              <p></p>
+              <p>-- Math is what you would expect</p>
+              <p>1 + 1 -- 2</p>
+              <p>8 - 1 -- 7</p>
+              <p>10 * 2 -- 20</p>
+              <p>35 / 5 -- 7.0</p>
+              <p></p>
+              <p>-- Division is not integer division by default</p>
+              <p>35 / 4 -- 8.75</p>
+              <p></p>
+              <p>-- integer division</p>
+              <p>35 `div` 4 -- 8</p>
+              <p></p>
+              <p>-- Boolean values are primitives</p>
+              <p>True</p>
+              <p>False</p>
+              <p></p>
+              <p>-- Boolean operations</p>
+              <p>not True -- False</p>
+              <p>not False -- True</p>
+              <p>1 == 1 -- True</p>
+              <p>1 /= 1 -- False</p>
+              <p>1 < 10 -- True</p>
+              <p></p>
+            </code>
+          </section>
+          <section>
+            <h3>Esqueleto</h3>
+            <p>
+              El esqueleto consiste en una función 'main' a la cual se ponen las funciones a ejecutar. Adicionalmente 
+              puedes poner imports para importar las funciones que necesites, y puedes crear tus propias funciones, ya sea en el 
+              mismo archivo, o importándolas desde otro.
+            </p>
+            <code class="code">
+              <p>import System.Info</p>
+              <p></p>
+              <p>main = do</p>
+              <p>    print os</p>
+              <p>    print arch</p>
+              <p>    print compilerName</p>
+              <p>    print compilerVersion</p>
+              <p></p>
+            </code>
+          </section>
+          <section>
+            <h3>Aplicación a descargar para editar y ejecutar</h3>
+            <p>El editar el código es muy sencillo, ya que cualquier editor funciona para este lenguaje</p>
+            <p>En el caso de ejecutar, podemos hacerlo de manera compilada e interpretada (seguir los pasos de la instalación)</p>
+            <a href="https://wiki.haskell.org/Es/Haskell_en_5_pasos" target="_blank" rel="noopener noreferrer">https://wiki.haskell.org/Es/Haskell_en_5_pasos</a>    <p>Normalmente necesitarás descargar las herramientas del lenguaje en el sistema operativo que uses</p>
+          </section>
+          <section>
+            <h3>Tipo de paradigma</h3>
+            <p>
+              Este lenguaje es de propósito general, aunque su sintaxis y por lo que es usado y conocido, es por el paradigma 
+              funcional, es decir, el propósito es la creación de funciones para modularizar el código y la 'lazy evaluation'.
+            </p>
+          </section>
+          </main>
+          <code class="code">
+            <h3>Base de datos simple con Haskell</h3>
+            <p>{-# LANGUAGE OverloadedStrings #-}</p>
+            <p></p>
+            <p>import Database.Sqlite</p>
+            <p></p>
+            <p>printRows stmt = do</p>
+            <p>    row <- step stmt</p>
+            <p>    if row == Done then</p>
+            <p>        return ()</p>
+            <p>    else do</p>
+            <p>        col <- column stmt 0</p>
+            <p>        print col</p>
+            <p>        printRows stmt</p>
+            <p></p>
+            <p>main = do</p>
+            <p>    conn <- open "database.db"</p>
+            <p></p>
+            <p>    stmt <- prepare conn "DROP TABLE IF EXISTS MyTable;"</p>
+            <p>    step stmt</p>
+            <p>    finalize stmt</p>
+            <p></p>
+            <p>    stmt <- prepare conn "CREATE TABLE IF NOT EXISTS MyTable (Name VARCHAR(20));"</p>
+            <p>    step stmt</p>
+            <p>    finalize stmt</p>
+            <p></p>
+            <p>    stmt <- prepare conn "INSERT INTO MyTable(Name) VALUES('Erik');"</p>
+            <p>    step stmt</p>
+            <p>    finalize stmt</p>
+            <p></p>
+            <p>    stmt <- prepare conn "INSERT INTO MyTable(Name) VALUES('Patrik');"</p>
+            <p>    step stmt</p>
+            <p>    finalize stmt</p>
+            <p></p>
+            <p>    stmt <- prepare conn "SELECT * FROM MyTable;"</p>
+            <p>    printRows stmt</p>
+            <p>    finalize stmt</p>
+            <p></p>
+            <p>    close conn</p>  
+          </code>
+          <main class="container__filled">
+          <h2>Bibliografía</h2>
+          <section>
+            <a href="http://www.lcc.uma.es/~blas/pfHaskell/gentle/goodies.html" target="_blank" rel="noopener noreferrer">http://www.lcc.uma.es/~blas/pfHaskell/gentle/goodies.html</a>    <a href="https://learnxinyminutes.com/docs/haskell/" target="_blank" rel="noopener noreferrer">https://learnxinyminutes.com/docs/haskell/</a>    <a href="https://www.schoolofhaskell.com/user/eriks/Simple%20examples" target="_blank" rel="noopener noreferrer">https://www.schoolofhaskell.com/user/eriks/Simple%20examples</a>    <a href="https://loshijosdelagrange.files.wordpress.com/2012/11/guia-rc3a1pida-haskell.pdf" target="_blank" rel="noopener noreferrer">https://loshijosdelagrange.files.wordpress.com/2012/11/guia-rc3a1pida-haskell.pdf</a>  </section>
+          </main>
+        </main>
+        <nav class="navigation">
+          <a href=tarea7.html><i class="fas fa-arrow-left"></i></a>
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href=tarea9.html><i class="fas fa-arrow-right"></i></a>
+        </nav>    </main>
+    <footer>
+      <p>Hecho por: Héctor Mtz</p>
+    </footer></body>
+</html>

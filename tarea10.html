@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/tareas.css">
+    <title>PIA</title>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+    
+      <section class="menu">
+        <i class="fas fa-bars menu_icon"></i>
+        <input type="checkbox" name="menu" id="menu" />
+      </section>
+      <nav>
+        <h2>Héctor Martínez</h2>
+      </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="sidebar">
+          <main>
+            <h3>Menú</h3>
+          </main>
+          <section>
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Índice
+            </a>
+          </section>
+          <section>
+            <a href="personales.html">
+              <i class="fas fa-user"></i>
+              Personales
+            </a>
+          </section>
+          <div>
+            <aside>
+              <a href="personal1.html">
+                Biografía
+              </a>
+            </aside>
+            <aside>
+              <a href="personal2.html">
+                Pasatiempo
+              </a>
+            </aside>
+            <aside>
+              <a href="personal3.html">
+                Personaje
+              </a>
+            </aside>
+          </div>
+        
+          <section>
+            <a href="tareas.html">
+              <i class="fas fa-book"></i>
+              Tareas
+            </a>
+          </section>
+          <div>
+            <aside><a href="tarea1.html">Tarea 1</a></aside>
+            <aside><a href="tarea2.html">Tarea 2</a></aside>
+            <aside><a href="tarea3.html">Tarea 3</a></aside>
+            <aside><a href="tarea4.html">Tarea 4</a></aside>
+            <aside><a href="tarea5.html">Tarea 5</a></aside>
+            <aside><a href="tarea6.html">Tarea 6</a></aside>
+            <aside><a href="tarea7.html">Tarea 7</a></aside>
+            <aside><a href="tarea8.html">Tarea 8</a></aside>
+            <aside><a href="tarea9.html">Tarea 9</a></aside>
+            <aside><a href="tarea10.html">Tarea 10</a></aside>
+            <aside><a href="tarea11.html">Tarea 11</a></aside>
+            <aside><a href="tarea12.html">Tarea 12</a></aside>
+            <aside><a href="tarea13.html">Tarea 13</a></aside>
+            <aside><a href="tarea14.html">Tarea 14</a></aside>
+            <aside><a href="tarea15.html">Tarea 15</a></aside>
+            <aside><a href="tarea16.html">Tarea 16</a></aside>
+            <aside><a href="tarea17.html">Tarea 17</a></aside>
+            <aside><a href="tarea18.html">Tarea 18</a></aside>
+            <aside><a href="tarea19.html">Tarea 19</a></aside>
+            <aside><a href="tarea20.html">Tarea 20</a></aside>
+            <aside><a href="tarea21.html">Tarea 21</a></aside>
+            <aside><a href="tarea22.html">Tarea 22</a></aside>
+          </div>
+          <section><a href="contacto">Contacto</a></section>
+        </aside>        <main class="container">
+          <main class="container__filled">
+          <h2>Tarea 10: Gödel</h2>
+          <section>
+            <h3>Símbolos</h3>
+            <p>
+              Está basado en módulos (que aceptan polimorfismo) y en tipos de datos (soporta
+              enteros y racionales con una precisión infinita, y número en coma flotante) y tiene una
+              amplia librería de módulos predefinidos.
+              Es un buen lenguaje para tareas de meta-programación, tales como compilación,
+              depuración, análisis, verificación o transformación de programas, ya que es mucho más
+              declarativo que Prolog, por ejemplo. 
+            </p>
+          </section>
+          <section>
+            <h3>Sintaxis</h3>
+            <p>
+              Utiliza ciertas palabras reservadas como 'MODULE', 'IMPORT' y 'PREDICATE' en mayúsculas
+            </p>
+            <img src="img/tarea10.png" alt="Funcionamiento del lenguaje">
+          </section>
+          <section>
+            <h3>Esqueleto</h3>
+            <p>Se compone por varios statements entre los cuales se identifican:</p>
+            <ul>
+              <li>Program</li>
+              <li>Module</li>
+              <li>Export Part</li>
+              <li>Local Part</li>
+              <li>Module Name</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Aplicación a descargar para editar y ejecutar</h3>
+            <p>
+              Este lenguaje está hecho con propósitos educativos de la Universidad de Briston. Puedes leer más acerca de ello en el siguiente link:
+            </p>
+            <a href="https://web.archive.org/web/20050304094122/http://www.cs.bris.ac.uk/~bowers/goedel.html" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/20050304094122/http://www.cs.bris.ac.uk/~bowers/goedel.html</a>  </section>
+          <section>
+            <h3>Tipo de paradigma</h3>
+            <p>
+              Gödel es un lenguaje de programación declarativo, de propósito general, adherido al paradigma de la programación lógica.
+            </p>
+          </section>
+          </main>
+          <code class="code">
+            <h3>Fibonacci en Godel</h3>
+            <p>MODULE Fibonacci.</p>
+            <p>IMPORT Integers.</p>
+            <p>PREDICATE Fib : Integer * Integer.</p>
+            <p>% Fib(k,n) <-> n is the Fibonacci number F_{k} of rank k.</p>
+            <p>Fib(0,0).</p>
+            <p>Fib(1,1).</p>
+            <p>Fib(k,n) <-</p>
+            <p>k > 1 &</p>
+            <p>FibIt(k-2,1,1,n).</p>
+            <p>PREDICATE FibIt : Integer * Integer * Integer * Integer.</p>
+            <p>% FibIt(k,f,g,n) <-> n = F_{k} * f + F_{k+1} * g.</p>
+            <p>FibIt(0,_,g,g).</p>
+            <p>FibIt(k,f,g,n) <-</p>
+            <p>k > 0 &</p>
+            <p>g < n &</p>
+            <p>FibIt(k-1,g,f+g,n).</p>
+            <p></p>
+          </code>
+          <main class="container__filled">
+          <h2>Bibliografía</h2>
+          <section>
+            <a href="https://dennisdarland.com/my_sw_projects/goedel/v1_3_27/doc/book.pdf" target="_blank" rel="noopener noreferrer">https://dennisdarland.com/my_sw_projects/goedel/v1_3_27/doc/book.pdf</a>    <a href="http://www.it.uc3m.es/jvillena/irc/practicas/estudios/Lenguajes_Logicos.pdf" target="_blank" rel="noopener noreferrer">http://www.it.uc3m.es/jvillena/irc/practicas/estudios/Lenguajes_Logicos.pdf</a>    <a href="https://amp.es.what-this.com/110423/1/godel-lenguaje-de-programacion.html" target="_blank" rel="noopener noreferrer">https://amp.es.what-this.com/110423/1/godel-lenguaje-de-programacion.html</a>    <a href="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/tutoriales/godel/index.html" target="_blank" rel="noopener noreferrer">https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/tutoriales/godel/index.html</a>    <a href="https://es-academic.com/dic.nsf/eswiki/1295991" target="_blank" rel="noopener noreferrer">https://es-academic.com/dic.nsf/eswiki/1295991</a>  </section>
+          </main>
+        </main>
+        <nav class="navigation">
+          <a href=tarea9.html><i class="fas fa-arrow-left"></i></a>
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href=tarea11.html><i class="fas fa-arrow-right"></i></a>
+        </nav>    </main>
+    <footer>
+      <p>Hecho por: Héctor Mtz</p>
+    </footer></body>
+</html>
+
