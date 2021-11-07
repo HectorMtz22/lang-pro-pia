@@ -111,15 +111,47 @@
   </section>
   <section>
     <h3>Esqueleto</h3>
+    <p>
+      Este lenguaje de programación normalmente tiene los programas encapsulados en funciones. 
+      Estas funciones pueden ser invocadas con una librería, pero también se necesitará instalarla. 
+      Para esto, podemos ejecutar los siguientes comandos:
+    </p>
+    <code class="code">
+      install.packages("deldir", dep=T) # Para la triangulación de Delaunay y teselación de Dirichlet junto con todas las dependencias
+    </code>
+    <code class="code">
+      library("deldir") # Para el ejemplo anterior.<br/>
+      library('Benchmarking') # Para el [[Análisis de Datos Envolvente]]<br/>
+      require(maps) # Para elaborar mapas. Previa instalación.<br/>
+      require('plot3D') # Para elaborar mapas 3D. Previa instalación.<br/>
+    </code>
   </section>
   <section>
     <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      R forma parte de un proyecto colaborativo y abierto. Sus usuarios pueden publicar paquetes que extienden su configuración básica. Existe un repositorio oficial de paquetes cuyo número superó en otoño de 2009 la cifra de los 2000.
+    </p>
+    <p>
+      Dado el enorme número de nuevos paquetes, estos se han organizado en vistas (o temas), que permiten agruparlos según su naturaleza y función. Por ejemplo, hay grupos de paquetes relacionados con estadística bayesiana, econometría, series temporales, etc.
+    </p>
+    <p>
+      Para facilitar el desarrollo de nuevos paquetes, se ha puesto a servicio de la comunidad una forja de desarrollo que facilita las tareas relativas a dicho proceso.
+    </p>
+    <p>
+      R se puede descargar en Windows, Linux y Mac OS desde el siguiente enlace:
+    </p>
+    {{> link link='https://cran.r-project.org/' }}
   </section>
   <section>
     <h3>Tipo de paradigma</h3>
+    <p>
+      R es un lenguaje de programación con enfoque al análisis estadístico. Tiene múltiples paradigmas, de los que se consideran 
+      el funcional, vectorial, imperativo, y procedural.
+    </p>
   </section>
   </main>
   <code class="code">
+    <h3>Factorial de un número en R</h3>
     <p>#Factorial de un número</p>
     <p>factorial<-function(n)</p>
     <p> {</p>
@@ -134,7 +166,9 @@
   <main class="container__filled">
   <h2>Bibliografía</h2>
   <section>
-    {{> link link='' }}
+    {{> link link='https://www.r-project.org/' }}
+    {{> link link='https://www.unir.net/ingenieria/revista/lenguaje-r-big-data/' }}
+    {{> link link='https://rstudio-pubs-static.s3.amazonaws.com/215332_188c0491b64a46f9b38d5d0768a7469f.html' }}
   </section>
   </main>
 </main>
