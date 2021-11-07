@@ -5,7 +5,7 @@ fs.readFile(process.argv[2], "utf8", (err, data) => {
     console.error(err);
     return;
   }
-  let lines = data.split("\n");
+  const lines = data.split("\n");
 
   for (let i = 0; i < lines.length; i++) {
     console.log(`<p>${lines[i]}</p>`);
