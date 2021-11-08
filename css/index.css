@@ -321,7 +321,8 @@ code p::before {
 
 code p {
   font-family: "Anonymous Pro", monospace;
-  line-height: 1.15; }
+  line-height: 1.15;
+  white-space: pre; }
 
 .code {
   border-radius: 5px;
