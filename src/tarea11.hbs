@@ -1,0 +1,123 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 11: COBOL</h2>
+  <section>
+    <h3>Símbolos</h3>
+    <p>
+      COBOL tiene un par de símbolos, aparte de los de aritmética tradicional, conocidos como palabras reservadas. 
+      Estas palabras se utilizan para indicar las instrucciones a utilizar:
+    </p>
+    <ul>
+      <li>Palabras clave como ADD, ACCEPT, MOVE</li>
+      <li>Carácteres especiales cómo +, -, *, <, <=, etc.</li>
+      <li>Constantes figurativas, cómo ZERO, SPACES, etc.</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Sintaxis</h3>
+    <p>
+      El código en este lenguaje tiene que cumplir algunas normas para ser aceptado por los compiladores. 
+      Si bien es cierto que algunas de estas cosas ya no son ocupadas por el cambio de paradigma de tarjetas perforadas a 
+      código digital escrito e interpretado por un procesador, se provee de una hoja de estilos para identificar los carácteres.
+    </p>
+    <table class="table">
+      <tr>
+        <th>Posición</th>
+        <th>Campo</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <th>1-6</th>
+        <td>Números de columna</td>
+        <td>Reservado para los códigos de línea de número.</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>Indicador</td>
+        <td>Puede tener asterisco (*) indicando comentarios.</td>
+      </tr>
+      <tr>
+        <th>8-11</th>
+        <td>Area A</td>
+        <td>Todas las divisiones, secciones, párrafos y entidades especiales.</td>
+      </tr>
+      <tr>
+        <th>12-72</th>
+        <td>Area B</td>
+        <td>Todos los statements</td>
+      </tr>
+      <tr>
+        <th>73-80</th>
+        <td>Area de Indicaciones</td>
+        <td>Esto es lo que usaría el programador para determianr lo que hace el programa.</td>
+      </tr>
+    </table>
+    <h4>Estructura</h4>
+    <p>
+      La estructura del programa es la siguiente:
+    </p>
+    <img src="img/tarea11.jpg" alt="">
+  </section>
+  <section>
+    <h3>Esqueleto</h3>
+    <code class="code">
+      <p>000100 IDENTIFICATION DIVISION.            000100</p>
+      <p>000200 PROGRAM-ID. HELLO.                  000101</p>
+      <p>000250* THIS IS A COMMENT LINE             000102</p>
+      <p>000300 PROCEDURE DIVISION.                 000103</p>
+      <p>000350 A000-FIRST-PARA.                    000104</p>
+      <p>000400     DISPLAY “Coding Sheet”.         000105</p>
+      <p>000500 STOP RUN.                           000106</p>
+    </code>
+  </section>
+  <section>
+    <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      Para ejecutar este tipo de programas, se necesitará un programa llamado Hercules, el cual lo puedes descargar desde 
+      el sitio oficial en Mac OS, Linux y Windows.
+    </p>
+    {{> link link='http://www.hercules-390.eu/' }}
+  </section>
+  <section>
+    <h3>Tipo de paradigma</h3>
+    <p>
+      COBOL inicialmente se basó en un contexto de negocios, por lo que se dice que está orientado a 
+      negocios con orientación a archivos y aplicaciones.
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <h3>Programa que identifica el número más grande</h3>
+    <p>IDENTIFICATION DIVISION.</p>
+    <p>PROGRAM-ID. HELLO.</p>
+    <p></p>
+    <p>DATA DIVISION.</p>
+    <p>   WORKING-STORAGE SECTION.</p>
+    <p>   01 WS-NUM1 PIC 9(9).</p>
+    <p>   01 WS-NUM2 PIC 9(9).</p>
+    <p></p>
+    <p>PROCEDURE DIVISION.</p>
+    <p>   A000-FIRST-PARA.</p>
+    <p>   MOVE 25 TO WS-NUM1.</p>
+    <p>   MOVE 15 TO WS-NUM2.</p>
+    <p>   </p>
+    <p>   IF WS-NUM1 IS GREATER THAN OR EQUAL TO WS-NUM2 THEN</p>
+    <p>      DISPLAY 'WS-NUM1 IS GREATER THAN WS-NUM2'</p>
+    <p>   ELSE</p>
+    <p>      DISPLAY 'WS-NUM1 IS LESS THAN WS-NUM2'</p>
+    <p>   END-IF.</p>
+    <p>   </p>
+    <p>STOP RUN.</p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='https://medium.com/enredando-con-programacion/cobol-que-es-cobol-3f86fa3a4394' }}
+    {{> link link='https://www.tutorialspoint.com/cobol/cobol_quick_guide.htm' }}
+  </section>
+  </main>
+</main>
+{{> nav prevHref='tarea5.html' nextHref='tarea7.html' }}
+{{/layout}}
+
