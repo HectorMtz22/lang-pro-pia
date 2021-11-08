@@ -2,7 +2,6 @@ pre,
 code {
   display: block;
   background: none;
-  // white-space: pre;
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   max-width: 100%;
@@ -27,6 +26,7 @@ code p::before {
 code p {
   font-family: "Anonymous Pro", monospace;
   line-height: 1.15;
+  white-space: pre;
 }
 
 .code {
