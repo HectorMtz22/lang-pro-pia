@@ -1,0 +1,93 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 12: Ada</h2>
+  <section>
+    <h3>Símbolos</h3>
+    <h4>Identificadores</h4>
+    <p>
+      Definición en BNF : identificador ::= letra { [ subrayado ] letra | cifra } letra ::= A | ... | Z | a | ... | z cifra ::= 0 | ... | 9 subrayado ::= _
+    </p>
+    <h4>Números</h4>
+    <ul>
+      <li>Digitos 0..9</li>
+      <li>Separador de decimales .</li>
+      <li>Simbolo de Exponenciación e o E</li>
+      <li>Símbolo de negativo</li>
+      <li>El separador _</li>
+    </ul>
+    <h4>Delimitadores</h4>
+    <p>
+      Los delimitadores pueden ser uno de los siguientes caracteres especiales: &'()*+,-./:;= O ser uno de los delimitadores compuestos por dos caracteres especiales: "=..**:=/==="
+    </p>
+  </section>
+  <section>
+    <h3>Sintaxis</h3>
+    <p>
+      Este lenguaje tiene algunas palabras reservadas que hacen 
+      bloques de códigos, como ya lo hemos visto en otros lenguajes:
+    </p>
+    <h4>Palabras reservadas</h4>
+    <p>
+      Lista de palabras reservadas: " abort, else, new, return, abs, elsif, not, reverse, abstract, end, null, accept, entry, select access, exception, of, separate, aliased, exit, or, subtype, all, others, and, for, out, tagged, array, function, task, at, package, terminate, generic, pragma, then, begin, goto, private, type, body, procedure, if, protected, until, case, in, use, constant, is, raise, range, when, declare, limited, record, while delay, loop, rem, with, delta, renames, digits, mod, requeue, xor, do"
+    </p>
+  </section>
+  <section>
+    <h3>Esqueleto</h3>
+    <code class="code">
+      <p>with Ada.Text_IO;</p>
+      <p></p>
+      <p>procedure Hola_Mundo is</p>
+      <p>begin</p>
+      <p>  Ada.Text_IO.Put("¡Hola, mundo!");</p>
+      <p>end Hola_Mundo;</p>
+    </code>
+  </section>
+  <section>
+    <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      Un compilador de Ada muy usado es GNAT, originalmente desarrollado por la Universidad de Nueva York bajo patrocinio del DoD. Está basado en la tecnología de GCC y es software libre. Actualmente está mantenido por AdaCore (antes llamada Ada Core Technologies), empresa que ofrece soporte y servicios sobre el compilador.Existen otros compiladores comerciales.
+    </p>
+  </section>
+  <section>
+    <h3>Tipo de paradigma</h3>
+    <p>
+      Ada es un lenguaje de programación orientado a objetos y fuertemente tipado de forma estática que fue diseñado por Jean Ichbiah de CII Honeywell Bull por encargo del Departamento de Defensa de los Estados Unidos. Es un lenguaje multipropósito, orientado a objetos y concurrente, pudiendo llegar desde la facilidad de Pascal hasta la flexibilidad de C++.
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <h3>Suma de 2 números en Ada</h3>
+    <p>With Gnat.IO; use Gnat.IO;</p>
+    <p></p>
+    <p>procedure ej2 is</p>
+    <p>   type Peras is new Integer;</p>
+    <p>   type Naranjas is new Integer;</p>
+    <p></p>
+    <p>   P : Peras;</p>
+    <p>   N : Naranjas;</p>
+    <p>   S : Integer;</p>
+    <p></p>
+    <p>   begin</p>
+    <p>      Put ("Ingrese primer operando entero: ");</p>
+    <p>      Get (Integer(N));</p>
+    <p>   New_Line;</p>
+    <p>   Put ("Ingrese segundo operando entero: ");</p>
+    <p>      Get (Integer(P));</p>
+    <p>   New_Line;</p>
+    <p>   S:= Integer(P)+Integer(N);</p>
+    <p>   Put ("La suma es: ");</p>
+    <p>   Put (S);</p>
+    <p>   end ej2;</p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='https://www.ecured.cu/Lenguaje_de_programaci%C3%B3n_Ada' }}
+    {{> link link='https://lengprg1.alumnos.exa.unicen.edu.ar/clases-pr%C3%A1cticas/trabajos-practicos-especiales/ada' }}
+  </section>
+  </main>
+</main>
+{{> nav prevHref='tarea13.html' nextHref='tarea11.html' }}
+{{/layout}}
+
