@@ -1,0 +1,177 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 15: Ruby</h2>
+  <section>
+    <h3>Símbolos</h3>
+    <p>
+      Un símbolo es el objeto más básico que puedes crear en Ruby: es un nombre y una ID interna. Los símbolos son útiles por que dado un símbolo, se refiere al mismo objeto en todo el programa. Por lo tanto, son más eficientes que los strings: dos strings con el mismo nombre, son dos objetos distintos. Esto implica un ahorra de tiempo y memoria.
+    </p>
+    <p>
+      Se pueden crear símbolos (symbol), un tipo de dato que tiene Ruby muy parecido a los string, ya que representa un texto de alguna forma, sin embargo son también muy parecidos a los números ya que son únicos e inmutables.
+    </p>
+    <p>
+      ¿Qué tiene de especial un symbol? Que siempre que se escriba de la misma forma se tiene el mismo object_id, es decir, se esta representando el mismo objeto.
+      En cambio con una cadena de texto la ejecución continua del método object_id sobre el objeto tipo string nos da un identificador del objeto diferente, porque aunque estén escritos de la misma forma son objetos distintos. Además no se puede cambiar un símbolo, una vez que se define no se puede cambiar un carácter o añadirle algo ya que son inmutables.
+    </p>
+  </section>
+  <section>
+    <h3>Sintaxis</h3>
+    <p>
+      La sintaxis de Ruby es muy parecida a otros lenguajes de programación:
+    </p>
+    <h4>Sentencias de control</h4>
+    <code class="code">
+      <p># If</p>
+      <p>if x < 5 then</p>
+      <p>sentencia1</p>
+      <p>end</p>
+      <p></p>
+      <p>#unless</p>
+      <p>unless x >= 5 then</p>
+      <p>sentencia1</p>
+      <p>end</p>
+      <p></p>
+      <p>#If /else</p>
+      <p>if x < 5 then</p>
+      <p>sentencia1</p>
+      <p>else</p>
+      <p>sentencia2</p>
+      <p>end</p>
+      <p></p>
+      <p># unless / else</p>
+      <p>unless x < 5 then</p>
+      <p>sentencia2</p>
+      <p>else</p>
+      <p>sentencia1</p>
+      <p>end</p>
+      <p></p>
+    </code>
+    <h4>Ciclos</h4>
+    <code class="code">
+      <p># (while)</p>
+      <p>i=0</p>
+      <p>while i < list.size</p>
+      <p>do</p>
+      <p>print "#{list[i]} "</p>
+      <p>i += 1</p>
+      <p>end</p>
+      <p></p>
+      <p>#(until)</p>
+      <p>i=0</p>
+      <p>until i == list.size</p>
+      <p>do</p>
+      <p>print "#{list[i]} "</p>
+      <p>i += 1</p>
+      <p>end</p>
+      <p></p>
+      <p>#(for)</p>
+      <p>for x in list</p>
+      <p>do</p>
+      <p>print "#{x} "</p>
+      <p>end</p>
+      <p></p>
+      <p># ('each')</p>
+      <p>list.each</p>
+      <p>do |x|</p>
+      <p>print "#{x} "</p>
+      <p>end</p>
+      <p></p>
+      <p># ( método 'loop')</p>
+      <p>i=0</p>
+      <p>n=list.size-1</p>
+      <p>loop do</p>
+      <p>print "#{list[i]} "</p>
+      <p>i += 1</p>
+      <p>break  if i > n</p>
+      <p>end</p>
+      <p></p>
+      <p># (Otro método 'loop')</p>
+      <p>i=0</p>
+      <p>n=list.size-1</p>
+      <p>loop do</p>
+      <p>print "#{list[i]} "</p>
+      <p>i += 1</p>
+      <p>break unless i</p>
+      <p></p>
+      <p>#('times')</p>
+      <p>n=list.size</p>
+      <p>n.times do |i|</p>
+      <p>print "#{list[i]} "</p>
+      <p>end</p>
+      <p></p>
+      <p>#('upto')</p>
+      <p>n=list.size-1</p>
+      <p>0.upto(n) do |i|</p>
+      <p>print "#{list[i]} "</p>
+      <p>end</p>
+      <p></p>
+      <p>#(for)</p>
+      <p>n=list.size-1</p>
+      <p>for</p>
+      <p>i in 0..n do</p>
+      <p>print "#{list[i]} "</p>
+      <p>end</p>
+      <p></p>
+      <p>#('each_index')</p>
+      <p>list.each_index do |xt</p>
+      <p>print "#{list[x]} "</p>
+      <p>en-ld</p>
+      <p></p>
+    </code>
+  </section>
+  <section>
+    <h3>Esqueleto</h3>
+    <p>
+      El esqueleto de un archivo puede estar vacío, puesto que no necesita de algún formato en específico. 
+      Podemos crear gemas de Ruby para reutilizar nuestro código, así como también reutilizar los códigos de alguien más.
+    </p>
+    <p>
+      Puedes leer más en el siguiente link:
+    </p>
+    {{> link link='https://rubygems.org/' }}
+  </section>
+  <section>
+    <h3>Aplicación a descargar para editar y ejecutar</h3>
+    <p>
+      Para descargar Ruby, necesitarás hacerlo desde la página oficial, el cual ofrece distintas versiones para Windows, Mac y Linux.
+    </p>
+    {{> link link='https://ruby-doc.org/downloads/' }}
+  </section>
+  <section>
+    <h3>Tipo de paradigma</h3>
+    <p>
+      Se sabe que la sintaxis de este lenguaje es muy fácil de entender y muy legible. Es un lenguaje sencillo y directo, amigable para aquellos que están comenzando a trabajar con la programación. Como ya mencionado aquí, el lenguaje Ruby está orientado a objetos, con tipado fuerte y dinámico.
+    </p>
+    <p>
+      A diferencia de otros lenguajes de programación, programar en Ruby no requiere, por ejemplo, caracteres de terminación para una declaración o que declare variables. La variable solo necesita tener un nombre y un valor asignado. 
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <h3>Ejemplo del uso de Arrays con el método each</h3>
+    <p>lenguajes = ['Inglés', 'Alemán', 'Ruby']</p>
+    <p></p>
+    <p>lenguajes.each do |leng|</p>
+    <p>  puts '¡Me gusta ' + leng + '!'</p>
+    <p>  puts '¿A ti?'</p>
+    <p>end</p>
+    <p></p>
+    <p>puts '¡Y vamos a escuchar esto para C++!'</p>
+    <p>puts '...'</p>
+    <p></p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='https://www.hostgator.mx/blog/lenguaje-de-programacion-ruby/' }}
+    {{> link link='https://openwebinars.net/blog/que-es-ruby/' }}
+    {{> link link='https://upnlruby.blogspot.com/p/s.html' }}
+    {{> link link='http://rubysur.org/aprende.a.programar/capitulos/matrices.html' }}
+    {{> link link='' }}
+  </section>
+  </main>
+</main>
+{{> nav prevHref='tarea14.html' nextHref='tarea16.html' }}
+{{/layout}}
+
