@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/tareas.css">
+    <title>PIA</title>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+    
+      <section class="menu">
+        <i class="fas fa-bars menu_icon"></i>
+        <input type="checkbox" name="menu" id="menu" />
+      </section>
+      <nav>
+        <h2>Héctor Martínez</h2>
+      </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="sidebar">
+          <main>
+            <h3>Menú</h3>
+          </main>
+          <section>
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Índice
+            </a>
+          </section>
+          <section>
+            <a href="personales.html">
+              <i class="fas fa-user"></i>
+              Personales
+            </a>
+          </section>
+          <div>
+            <aside>
+              <a href="personal1.html">
+                Biografía
+              </a>
+            </aside>
+            <aside>
+              <a href="personal2.html">
+                Pasatiempo
+              </a>
+            </aside>
+            <aside>
+              <a href="personal3.html">
+                Personaje
+              </a>
+            </aside>
+          </div>
+        
+          <section>
+            <a href="tareas.html">
+              <i class="fas fa-book"></i>
+              Tareas
+            </a>
+          </section>
+          <div>
+            <aside><a href="tarea1.html">Tarea 1</a></aside>
+            <aside><a href="tarea2.html">Tarea 2</a></aside>
+            <aside><a href="tarea3.html">Tarea 3</a></aside>
+            <aside><a href="tarea4.html">Tarea 4</a></aside>
+            <aside><a href="tarea5.html">Tarea 5</a></aside>
+            <aside><a href="tarea6.html">Tarea 6</a></aside>
+            <aside><a href="tarea7.html">Tarea 7</a></aside>
+            <aside><a href="tarea8.html">Tarea 8</a></aside>
+            <aside><a href="tarea9.html">Tarea 9</a></aside>
+            <aside><a href="tarea10.html">Tarea 10</a></aside>
+            <aside><a href="tarea11.html">Tarea 11</a></aside>
+            <aside><a href="tarea12.html">Tarea 12</a></aside>
+            <aside><a href="tarea13.html">Tarea 13</a></aside>
+            <aside><a href="tarea14.html">Tarea 14</a></aside>
+            <aside><a href="tarea15.html">Tarea 15</a></aside>
+            <aside><a href="tarea16.html">Tarea 16</a></aside>
+            <aside><a href="tarea17.html">Tarea 17</a></aside>
+            <aside><a href="tarea18.html">Tarea 18</a></aside>
+            <aside><a href="tarea19.html">Tarea 19</a></aside>
+            <aside><a href="tarea20.html">Tarea 20</a></aside>
+            <aside><a href="tarea21.html">Tarea 21</a></aside>
+            <aside><a href="tarea22.html">Tarea 22</a></aside>
+          </div>
+          <section><a href="contacto">Contacto</a></section>
+        </aside>        <main class="container">
+          <main class="container__filled">
+          <h2>Tarea 16: Conversión de Temperatura</h2>
+          <section>
+            <p>
+              Elabore un programa en JAVA que mediante un menú de opciones permita 
+              calcular la conversión de escala de temperatura:
+            </p>
+            <ol>
+              <li>De grados Centígrados a grados Farenheit</li>
+              <li>De grados Farenheit a grados Centígrados</li>
+            </ol>
+            <p>
+              Nota: Usar el cuadro de diálogo <code>showOptionDialog()</code>
+              para seleccionar: °C -> °F y otro °F -> °C
+            </p>
+          </section>
+          </main>
+          <code class="code">
+            <p>// Héctor Mauricio Flores Martínez 1897759</p>
+            <p>import javax.swing.JOptionPane;</p>
+            <p></p>
+            <p>public class tarea16 {</p>
+            <p>  public static void main(String[] args) {</p>
+            <p>    double resultado;</p>
+            <p>    String[] options = {"°C -> °F", "°F -> °C"};</p>
+            <p>    int seleccion = JOptionPane.showOptionDialog(</p>
+            <p>      null, </p>
+            <p>      "Ingresa una opción", </p>
+            <p>      "Tarea 16", </p>
+            <p>      JOptionPane.DEFAULT_OPTION, </p>
+            <p>      JOptionPane.INFORMATION_MESSAGE, </p>
+            <p>      null, </p>
+            <p>      options, </p>
+            <p>      options[0] </p>
+            <p>    );</p>
+            <p></p>
+            <p>    String inputGrados = JOptionPane.showInputDialog("Ingresa la temperatura"); </p>
+            <p>    float grados = Float.parseFloat(inputGrados);</p>
+            <p></p>
+            <p>    if (seleccion == 0) {</p>
+            <p>      // Es de Celsius a Farenheit</p>
+            <p>      resultado = (grados * 1.8) + 32;</p>
+            <p>    } else {</p>
+            <p>      // Es de Farenheit a Celsius</p>
+            <p>      resultado = (grados - 32) / 1.8;</p>
+            <p>    }</p>
+            <p></p>
+            <p>    String mensajeFinal = String.format("El resultado es: %.2f", resultado);</p>
+            <p>    JOptionPane.showMessageDialog(</p>
+            <p>      null, </p>
+            <p>      mensajeFinal, </p>
+            <p>      "Tarea 16", </p>
+            <p>      JOptionPane.INFORMATION_MESSAGE</p>
+            <p>    );</p>
+            <p>    System.out.println(mensajeFinal);</p>
+            <p>  }</p>
+            <p>}</p>
+            <p></p>
+          </code>
+        </main>
+        <nav class="navigation">
+          <a href=tarea15.html><i class="fas fa-arrow-left"></i></a>
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href=tarea17.html><i class="fas fa-arrow-right"></i></a>
+        </nav>    </main>
+    <footer>
+      <p>Hecho por: Héctor Mtz</p>
+    </footer></body>
+</html>

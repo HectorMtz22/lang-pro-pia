@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/tareas.css">
+    <title>PIA</title>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+    
+      <section class="menu">
+        <i class="fas fa-bars menu_icon"></i>
+        <input type="checkbox" name="menu" id="menu" />
+      </section>
+      <nav>
+        <h2>Héctor Martínez</h2>
+      </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="sidebar">
+          <main>
+            <h3>Menú</h3>
+          </main>
+          <section>
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Índice
+            </a>
+          </section>
+          <section>
+            <a href="personales.html">
+              <i class="fas fa-user"></i>
+              Personales
+            </a>
+          </section>
+          <div>
+            <aside>
+              <a href="personal1.html">
+                Biografía
+              </a>
+            </aside>
+            <aside>
+              <a href="personal2.html">
+                Pasatiempo
+              </a>
+            </aside>
+            <aside>
+              <a href="personal3.html">
+                Personaje
+              </a>
+            </aside>
+          </div>
+        
+          <section>
+            <a href="tareas.html">
+              <i class="fas fa-book"></i>
+              Tareas
+            </a>
+          </section>
+          <div>
+            <aside><a href="tarea1.html">Tarea 1</a></aside>
+            <aside><a href="tarea2.html">Tarea 2</a></aside>
+            <aside><a href="tarea3.html">Tarea 3</a></aside>
+            <aside><a href="tarea4.html">Tarea 4</a></aside>
+            <aside><a href="tarea5.html">Tarea 5</a></aside>
+            <aside><a href="tarea6.html">Tarea 6</a></aside>
+            <aside><a href="tarea7.html">Tarea 7</a></aside>
+            <aside><a href="tarea8.html">Tarea 8</a></aside>
+            <aside><a href="tarea9.html">Tarea 9</a></aside>
+            <aside><a href="tarea10.html">Tarea 10</a></aside>
+            <aside><a href="tarea11.html">Tarea 11</a></aside>
+            <aside><a href="tarea12.html">Tarea 12</a></aside>
+            <aside><a href="tarea13.html">Tarea 13</a></aside>
+            <aside><a href="tarea14.html">Tarea 14</a></aside>
+            <aside><a href="tarea15.html">Tarea 15</a></aside>
+            <aside><a href="tarea16.html">Tarea 16</a></aside>
+            <aside><a href="tarea17.html">Tarea 17</a></aside>
+            <aside><a href="tarea18.html">Tarea 18</a></aside>
+            <aside><a href="tarea19.html">Tarea 19</a></aside>
+            <aside><a href="tarea20.html">Tarea 20</a></aside>
+            <aside><a href="tarea21.html">Tarea 21</a></aside>
+            <aside><a href="tarea22.html">Tarea 22</a></aside>
+          </div>
+          <section><a href="contacto">Contacto</a></section>
+        </aside>        <main class="container">
+          <main class="container__filled">
+          <h2>Tarea 14: SQL</h2>
+          <p>
+            Se trata de un lenguaje fuertemente basado en el inglés, que puede ser utilizado en modo conversacional mediante un intérprete o bien formando parte de un programa desarrollado en un lenguaje de programación anfitrión como C, Cobol, etc. (SQL embebido). La característica relacional más importante de SQL es que permite acceder a los datos sin necesidad de especificar cómo se ha de realizar dicho acceso permitiendo así la "navegación automática" por los datos.
+          </p>
+          <section>
+            <h3>Símbolos</h3>
+            <p>
+              SQL provee palabras reservadas para este lenguaje, el cual se recomienda ponerlas en mayúsculas para no confundirse, pero 
+              en realidad no importa. Normalmente se resaltan con otro color si estás usando un color que soporte el lenguaje.
+            </p>
+          </section>
+          <section>
+            <h3>Sintaxis</h3>
+            <p>
+              Para definir un atributo se debe especificar su nombre, su tipo básico de datos y una sencilla restricción opcional sobre sus posibles valores. El tipo de datos indica el dominio general del atributo, que puede restringirse mediante la restricción opcional.
+            </p>
+            <code class="code">
+              nombre_atributo tipo_atributo restricción_atributo
+            </code>
+            <p>
+              Si no se especifica ninguna restricción sobre el atributo, entonces puede tomar cualquier valor compatible con su tipo de datos, y el valor nulo (null). Las posibles restricciones son:
+            </p>
+            
+          </section>
+          <section>
+            <h3>Esqueleto</h3>
+            <p>
+              Este lenguaje no tiene un esqueleto como tal, si no que se divide en oraciones como comúnmente las haríamos en inglés.
+            </p>
+            <p>
+              Los posibles valores son:
+            </p>
+          <table class="table">
+            <TR><TD>PRIMARY KEY</TD>
+            <TD>El atributo es clave primaria. Por tanto no acepta valores repetidos ni nulos.</TD></TR>
+            <TR><TD>UNIQUE</TD>
+            <TD>El atributo no acepta valores repetidos, pero s&iacute; nulos.</TD></TR>
+            <TR><TD>NOT NULL</TD>
+            <TD>El atributo no acepta valores nulos, pero s&iacute; &uacute;nicos.</TD></TR>
+            <TR><TD>CHECK</TD>
+            <TD>Restricci&oacute;n arbitraria.</TD></TR>
+          </table>
+          </section>
+          <section>
+            <h3>Aplicación a descargar para editar y ejecutar</h3>
+            <p>Este lenguaje se puede descargar con varios tipos de Administración de base de datos. Tenemos MySQL, MariaDB, y otros propios como 
+              Oracle y Microsoft SQL Server. Cada uno tiene diferente implementación del lenguaje, y nos puede servir en distintos ámbitos.
+            </p>
+          </section>
+          <section>
+            <h3>Tipo de paradigma</h3>
+            <p>
+              El paradigma de este lenguaje es declarativo, pero puede ser usado en cualquier paradigma, por lo que es multiparadigma.
+            </p>
+          </section>
+          </main>
+          <code class="code">
+            <p>CREATE TABLE provincia (</p>
+            <p>codprov NUMBER(2) PRIMARY KEY,</p>
+            <p>nomprov CHAR(20) UNIQUE NOT NULL</p>
+            <p>);</p>
+            <p></p>
+            <p>CREATE TABLE alumno (</p>
+            <p>num NUMBER(4),</p>
+            <p>nombre CHAR(10) NOT NULL,</p>
+            <p>apellidos CHAR(20) NOT NULL,</p>
+            <p>edad NUMBER(2) CHECK (edad>16),</p>
+            <p>codprov NUMBER(2),</p>
+            <p>nota NUMBER(4,2) CHECK (nota >=0 AND nota <= 10),</p>
+            <p>PRIMARY KEY (num),</p>
+            <p>FOREIGN KEY (codprov) REFERENCES provincia</p>
+            <p>);</p>
+          </code>
+          <main class="container__filled">
+          <h2>Bibliografía</h2>
+          <section>
+            <a href="http://www.cs.us.es/cursos/bd-2001/temas/sql_I.html" target="_blank" rel="noopener noreferrer">http://www.cs.us.es/cursos/bd-2001/temas/sql_I.html</a>  </section>
+          </main>
+        </main>
+        <nav class="navigation">
+          <a href=tarea13.html><i class="fas fa-arrow-left"></i></a>
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href=tarea15.html><i class="fas fa-arrow-right"></i></a>
+        </nav>    </main>
+    <footer>
+      <p>Hecho por: Héctor Mtz</p>
+    </footer></body>
+</html>

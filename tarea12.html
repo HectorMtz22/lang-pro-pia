@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/tareas.css">
+    <title>PIA</title>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+    
+      <section class="menu">
+        <i class="fas fa-bars menu_icon"></i>
+        <input type="checkbox" name="menu" id="menu" />
+      </section>
+      <nav>
+        <h2>Héctor Martínez</h2>
+      </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="sidebar">
+          <main>
+            <h3>Menú</h3>
+          </main>
+          <section>
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Índice
+            </a>
+          </section>
+          <section>
+            <a href="personales.html">
+              <i class="fas fa-user"></i>
+              Personales
+            </a>
+          </section>
+          <div>
+            <aside>
+              <a href="personal1.html">
+                Biografía
+              </a>
+            </aside>
+            <aside>
+              <a href="personal2.html">
+                Pasatiempo
+              </a>
+            </aside>
+            <aside>
+              <a href="personal3.html">
+                Personaje
+              </a>
+            </aside>
+          </div>
+        
+          <section>
+            <a href="tareas.html">
+              <i class="fas fa-book"></i>
+              Tareas
+            </a>
+          </section>
+          <div>
+            <aside><a href="tarea1.html">Tarea 1</a></aside>
+            <aside><a href="tarea2.html">Tarea 2</a></aside>
+            <aside><a href="tarea3.html">Tarea 3</a></aside>
+            <aside><a href="tarea4.html">Tarea 4</a></aside>
+            <aside><a href="tarea5.html">Tarea 5</a></aside>
+            <aside><a href="tarea6.html">Tarea 6</a></aside>
+            <aside><a href="tarea7.html">Tarea 7</a></aside>
+            <aside><a href="tarea8.html">Tarea 8</a></aside>
+            <aside><a href="tarea9.html">Tarea 9</a></aside>
+            <aside><a href="tarea10.html">Tarea 10</a></aside>
+            <aside><a href="tarea11.html">Tarea 11</a></aside>
+            <aside><a href="tarea12.html">Tarea 12</a></aside>
+            <aside><a href="tarea13.html">Tarea 13</a></aside>
+            <aside><a href="tarea14.html">Tarea 14</a></aside>
+            <aside><a href="tarea15.html">Tarea 15</a></aside>
+            <aside><a href="tarea16.html">Tarea 16</a></aside>
+            <aside><a href="tarea17.html">Tarea 17</a></aside>
+            <aside><a href="tarea18.html">Tarea 18</a></aside>
+            <aside><a href="tarea19.html">Tarea 19</a></aside>
+            <aside><a href="tarea20.html">Tarea 20</a></aside>
+            <aside><a href="tarea21.html">Tarea 21</a></aside>
+            <aside><a href="tarea22.html">Tarea 22</a></aside>
+          </div>
+          <section><a href="contacto">Contacto</a></section>
+        </aside>        <main class="container">
+          <main class="container__filled">
+          <h2>Tarea 12: Ada</h2>
+          <section>
+            <h3>Símbolos</h3>
+            <h4>Identificadores</h4>
+            <p>
+              Definición en BNF : identificador ::= letra { [ subrayado ] letra | cifra } letra ::= A | ... | Z | a | ... | z cifra ::= 0 | ... | 9 subrayado ::= _
+            </p>
+            <h4>Números</h4>
+            <ul>
+              <li>Digitos 0..9</li>
+              <li>Separador de decimales .</li>
+              <li>Simbolo de Exponenciación e o E</li>
+              <li>Símbolo de negativo</li>
+              <li>El separador _</li>
+            </ul>
+            <h4>Delimitadores</h4>
+            <p>
+              Los delimitadores pueden ser uno de los siguientes caracteres especiales: &'()*+,-./:;= O ser uno de los delimitadores compuestos por dos caracteres especiales: "=..**:=/==="
+            </p>
+          </section>
+          <section>
+            <h3>Sintaxis</h3>
+            <p>
+              Este lenguaje tiene algunas palabras reservadas que hacen 
+              bloques de códigos, como ya lo hemos visto en otros lenguajes:
+            </p>
+            <h4>Palabras reservadas</h4>
+            <p>
+              Lista de palabras reservadas: " abort, else, new, return, abs, elsif, not, reverse, abstract, end, null, accept, entry, select access, exception, of, separate, aliased, exit, or, subtype, all, others, and, for, out, tagged, array, function, task, at, package, terminate, generic, pragma, then, begin, goto, private, type, body, procedure, if, protected, until, case, in, use, constant, is, raise, range, when, declare, limited, record, while delay, loop, rem, with, delta, renames, digits, mod, requeue, xor, do"
+            </p>
+          </section>
+          <section>
+            <h3>Esqueleto</h3>
+            <code class="code">
+              <p>with Ada.Text_IO;</p>
+              <p></p>
+              <p>procedure Hola_Mundo is</p>
+              <p>begin</p>
+              <p>  Ada.Text_IO.Put("¡Hola, mundo!");</p>
+              <p>end Hola_Mundo;</p>
+            </code>
+          </section>
+          <section>
+            <h3>Aplicación a descargar para editar y ejecutar</h3>
+            <p>
+              Un compilador de Ada muy usado es GNAT, originalmente desarrollado por la Universidad de Nueva York bajo patrocinio del DoD. Está basado en la tecnología de GCC y es software libre. Actualmente está mantenido por AdaCore (antes llamada Ada Core Technologies), empresa que ofrece soporte y servicios sobre el compilador.Existen otros compiladores comerciales.
+            </p>
+          </section>
+          <section>
+            <h3>Tipo de paradigma</h3>
+            <p>
+              Ada es un lenguaje de programación orientado a objetos y fuertemente tipado de forma estática que fue diseñado por Jean Ichbiah de CII Honeywell Bull por encargo del Departamento de Defensa de los Estados Unidos. Es un lenguaje multipropósito, orientado a objetos y concurrente, pudiendo llegar desde la facilidad de Pascal hasta la flexibilidad de C++.
+            </p>
+          </section>
+          </main>
+          <code class="code">
+            <h3>Suma de 2 números en Ada</h3>
+            <p>With Gnat.IO; use Gnat.IO;</p>
+            <p></p>
+            <p>procedure ej2 is</p>
+            <p>   type Peras is new Integer;</p>
+            <p>   type Naranjas is new Integer;</p>
+            <p></p>
+            <p>   P : Peras;</p>
+            <p>   N : Naranjas;</p>
+            <p>   S : Integer;</p>
+            <p></p>
+            <p>   begin</p>
+            <p>      Put ("Ingrese primer operando entero: ");</p>
+            <p>      Get (Integer(N));</p>
+            <p>   New_Line;</p>
+            <p>   Put ("Ingrese segundo operando entero: ");</p>
+            <p>      Get (Integer(P));</p>
+            <p>   New_Line;</p>
+            <p>   S:= Integer(P)+Integer(N);</p>
+            <p>   Put ("La suma es: ");</p>
+            <p>   Put (S);</p>
+            <p>   end ej2;</p>
+          </code>
+          <main class="container__filled">
+          <h2>Bibliografía</h2>
+          <section>
+            <a href="https://www.ecured.cu/Lenguaje_de_programaci%C3%B3n_Ada" target="_blank" rel="noopener noreferrer">https://www.ecured.cu/Lenguaje_de_programaci%C3%B3n_Ada</a>    <a href="https://lengprg1.alumnos.exa.unicen.edu.ar/clases-pr%C3%A1cticas/trabajos-practicos-especiales/ada" target="_blank" rel="noopener noreferrer">https://lengprg1.alumnos.exa.unicen.edu.ar/clases-pr%C3%A1cticas/trabajos-practicos-especiales/ada</a>  </section>
+          </main>
+        </main>
+        <nav class="navigation">
+          <a href=tarea11.html><i class="fas fa-arrow-left"></i></a>
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href=tarea13.html><i class="fas fa-arrow-right"></i></a>
+        </nav>    </main>
+    <footer>
+      <p>Hecho por: Héctor Mtz</p>
+    </footer></body>
+</html>

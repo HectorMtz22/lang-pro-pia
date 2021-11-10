@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/tareas.css">
+    <title>PIA</title>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+    
+      <section class="menu">
+        <i class="fas fa-bars menu_icon"></i>
+        <input type="checkbox" name="menu" id="menu" />
+      </section>
+      <nav>
+        <h2>Héctor Martínez</h2>
+      </nav>
+    </header>
+    <main class="wrapper">
+        <aside class="sidebar">
+          <main>
+            <h3>Menú</h3>
+          </main>
+          <section>
+            <a href="index.html">
+              <i class="fas fa-home"></i>
+              Índice
+            </a>
+          </section>
+          <section>
+            <a href="personales.html">
+              <i class="fas fa-user"></i>
+              Personales
+            </a>
+          </section>
+          <div>
+            <aside>
+              <a href="personal1.html">
+                Biografía
+              </a>
+            </aside>
+            <aside>
+              <a href="personal2.html">
+                Pasatiempo
+              </a>
+            </aside>
+            <aside>
+              <a href="personal3.html">
+                Personaje
+              </a>
+            </aside>
+          </div>
+        
+          <section>
+            <a href="tareas.html">
+              <i class="fas fa-book"></i>
+              Tareas
+            </a>
+          </section>
+          <div>
+            <aside><a href="tarea1.html">Tarea 1</a></aside>
+            <aside><a href="tarea2.html">Tarea 2</a></aside>
+            <aside><a href="tarea3.html">Tarea 3</a></aside>
+            <aside><a href="tarea4.html">Tarea 4</a></aside>
+            <aside><a href="tarea5.html">Tarea 5</a></aside>
+            <aside><a href="tarea6.html">Tarea 6</a></aside>
+            <aside><a href="tarea7.html">Tarea 7</a></aside>
+            <aside><a href="tarea8.html">Tarea 8</a></aside>
+            <aside><a href="tarea9.html">Tarea 9</a></aside>
+            <aside><a href="tarea10.html">Tarea 10</a></aside>
+            <aside><a href="tarea11.html">Tarea 11</a></aside>
+            <aside><a href="tarea12.html">Tarea 12</a></aside>
+            <aside><a href="tarea13.html">Tarea 13</a></aside>
+            <aside><a href="tarea14.html">Tarea 14</a></aside>
+            <aside><a href="tarea15.html">Tarea 15</a></aside>
+            <aside><a href="tarea16.html">Tarea 16</a></aside>
+            <aside><a href="tarea17.html">Tarea 17</a></aside>
+            <aside><a href="tarea18.html">Tarea 18</a></aside>
+            <aside><a href="tarea19.html">Tarea 19</a></aside>
+            <aside><a href="tarea20.html">Tarea 20</a></aside>
+            <aside><a href="tarea21.html">Tarea 21</a></aside>
+            <aside><a href="tarea22.html">Tarea 22</a></aside>
+          </div>
+          <section><a href="contacto">Contacto</a></section>
+        </aside>        <main class="container">
+          <main class="container__filled">
+          <h2>Tarea 17: Conversión de monedas</h2>
+          <section>
+            <p>
+              Elabore un programa en JAVA que a través de un Menú 
+              de opciones permita al usuario convertir de pesos a las 
+              siguientes monedas:
+            </p>
+            <ol>
+              <li>Dólar</li>
+              <li>Euro</li>
+              <li>Yen (japonés)</li>
+              <li>Dólar de Hong Kong</li>
+            </ol>
+            <p>
+              Notas: 
+            </p>
+            <ul>
+              <li>Las equivalencias deberán definirse dentro del programa.</li>
+              <li>Usar el cuadro de diálogo showOptionDialog(), para seleccionar: Dólar, Euro, Yen y DolarHK</li>
+            </ul>
+          </section>
+          </main>
+          <code class="code">
+            <p>// Héctor Mauricio Flores Martínez 1897759</p>
+            <p>import javax.swing.JOptionPane;</p>
+            <p></p>
+            <p>public class tarea17 {</p>
+            <p>  public static void main(String[] args) {</p>
+            <p>    double resultado = 0;</p>
+            <p>    String[] options = {</p>
+            <p>      "Dolar", </p>
+            <p>      "Euro", </p>
+            <p>      "Yen", </p>
+            <p>      "DolarHK"</p>
+            <p>    };</p>
+            <p>    int seleccion = JOptionPane.showOptionDialog(</p>
+            <p>      null, </p>
+            <p>      "Conversor de Pesos a otra moneda", </p>
+            <p>      "Tarea 17", </p>
+            <p>      JOptionPane.DEFAULT_OPTION, </p>
+            <p>      JOptionPane.INFORMATION_MESSAGE, </p>
+            <p>      null, </p>
+            <p>      options, </p>
+            <p>      options[0] </p>
+            <p>    );</p>
+            <p></p>
+            <p>    String inputDinero = JOptionPane.showInputDialog("Ingresa la cantidad (en pesos)"); </p>
+            <p>    float dinero = Float.parseFloat(inputDinero);</p>
+            <p></p>
+            <p>    switch (seleccion) {</p>
+            <p>      case 0:</p>
+            <p>        // Dolar</p>
+            <p>        System.out.println("Dolar");</p>
+            <p>        resultado = dinero * 0.049;</p>
+            <p>        break;</p>
+            <p>      </p>
+            <p>      case 1:</p>
+            <p>        // Euro </p>
+            <p>        System.out.println("Euro");</p>
+            <p>        resultado = dinero * 0.042;</p>
+            <p>        break;</p>
+            <p>      </p>
+            <p>      case 2:</p>
+            <p>        // Yen (Japones)</p>
+            <p>        System.out.println("Yen");</p>
+            <p>        resultado = dinero * 5.55;</p>
+            <p>        break;</p>
+            <p>      </p>
+            <p>      case 3:</p>
+            <p>        // DolarHK</p>
+            <p>        System.out.println("DolarHK");</p>
+            <p>        resultado = dinero * 0.38;</p>
+            <p>        break;</p>
+            <p>    </p>
+            <p>      default:</p>
+            <p>        System.out.println("Datos Inválidos");</p>
+            <p>        break;</p>
+            <p>    }</p>
+            <p></p>
+            <p></p>
+            <p>    String mensajeFinal = String.format("El resultado es: %.2f", resultado);</p>
+            <p>    JOptionPane.showMessageDialog(</p>
+            <p>      null, </p>
+            <p>      mensajeFinal, </p>
+            <p>      "Tarea 17", </p>
+            <p>      JOptionPane.INFORMATION_MESSAGE</p>
+            <p>    );</p>
+            <p>    System.out.println(mensajeFinal);</p>
+            <p>  }</p>
+            <p>}</p>
+            <p></p>
+          </code>
+        </main>
+        <nav class="navigation">
+          <a href=tarea16.html><i class="fas fa-arrow-left"></i></a>
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href=tarea18.html><i class="fas fa-arrow-right"></i></a>
+        </nav>    </main>
+    <footer>
+      <p>Hecho por: Héctor Mtz</p>
+    </footer></body>
+</html>
