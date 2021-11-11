@@ -1,0 +1,100 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 21: Suma de Matrices</h2>
+  <section>
+    <p>
+      Elaborar un programa en Java que calcule la suma de dos matrices que 
+      ingrese el usuario. (Nota: Validar lo que sea necesario para poder realizar la suma de matrices).
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <p>// Héctor Mauricio Flores Martínez</p>
+    <p>import java.util.Scanner;</p>
+    <p></p>
+    <p>public class tarea21 {</p>
+    <p>  public static void main(String[] args) {</p>
+    <p>    Scanner input = new Scanner(System.in);</p>
+    <p></p>
+    <p>    System.out.println("Matriz 1");</p>
+    <p>    System.out.print("Ingresa el número de las filas: ");</p>
+    <p>    int n = input.nextInt();</p>
+    <p></p>
+    <p>    System.out.print("Ingresa el número de columnas: ");</p>
+    <p>    int m = input.nextInt();</p>
+    <p></p>
+    <p>    // Declaramos la matriz1</p>
+    <p>    int[][] matrix1 = new int[n][m];</p>
+    <p>    matrix1 = llenaMatriz(input, n, m);</p>
+    <p></p>
+    <p>    int n2, m2;</p>
+    <p>    do {</p>
+    <p>      System.out.println("Matriz 2");</p>
+    <p>      System.out.print("Ingresa el número de las filas: ");</p>
+    <p>      n2 = input.nextInt();</p>
+    <p></p>
+    <p>      System.out.print("Ingresa el número de columnas: ");</p>
+    <p>      m2 = input.nextInt();</p>
+    <p>      // Verificación si son de la misma longitud</p>
+    <p>      if (n != n2 || m != m2) {</p>
+    <p>        System.out.println("Las matrices deben tener la misma longitud\n");</p>
+    <p>      }</p>
+    <p>    } while (n != n2 || m != m2);</p>
+    <p></p>
+    <p>    // Declaramos la matriz2</p>
+    <p>    int[][] matrix2 = new int[n][m];</p>
+    <p>    matrix2 = llenaMatriz(input, n, m);</p>
+    <p>    // Hacemos la suma en otra matriz</p>
+    <p>    int[][] matrix3 = new int[n][m];</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        matrix3[i][j] = matrix1[i][j] + matrix2[i][j];</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p></p>
+    <p>    // Subrutina vista en tarea 20</p>
+    <p>    imprimirMatriz(matrix3, n, m);</p>
+    <p></p>
+    <p>    input.close();</p>
+    <p>  }</p>
+    <p>  // Subrutina para llenar la matriz</p>
+    <p>  // Se vió por primera vez en tarea 20</p>
+    <p>  public static int[][] llenaMatriz (Scanner input, int n, int m) {</p>
+    <p>    int[][] matrix = new int[n][m];</p>
+    <p>    // Llenamos la matriz</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        System.out.print("A[" + i + "][" + j + "] = ");</p>
+    <p>        matrix[i][j] = input.nextInt();</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p>    return matrix;</p>
+    <p>  }</p>
+    <p></p>
+    <p>  // Subrutina para imprimir la matriz</p>
+    <p>  // Se vió por primera vez en tarea 20</p>
+    <p>  public static void imprimirMatriz (int[][] matrix, int n, int m) {</p>
+    <p>    // Imprime la matriz</p>
+    <p>	  System.out.println("\nMatriz");</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        // Formatea los números</p>
+    <p>        System.out.printf("%4d ", matrix[i][j]);</p>
+    <p>      }</p>
+    <p>      System.out.println();</p>
+    <p>   }</p>
+    <p>  }</p>
+    <p>}</p>
+    <p></p>
+  </code>
+  <main class="container__filled">
+  <h2>Bibliografía</h2>
+  <section>
+    {{> link link='' }}
+  </section>
+  </main>
+</main>
+{{> nav prevHref='tarea20.html' nextHref='tarea22.html' }}
+{{/layout}}
+
