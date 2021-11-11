@@ -1,0 +1,45 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 18: Serie A</h2>
+  <section>
+    <p>
+      Construya un programa en JAVA que calcule e imprima la siguiente serie para los N 
+      primeros términos:
+    </p>
+    <img src="img/tarea18.png" alt="Diagrama con la serie a realizar" />
+  </section>
+  </main>
+  <code class="code">
+    <p>// Héctor Mauricio Flores Martínez 1897759</p>
+    <p>import java.lang.Math;</p>
+    <p>import java.util.Scanner;</p>
+    <p></p>
+    <p>public class tarea18 {</p>
+    <p>  public static void main(String[] args) {</p>
+    <p>    Scanner input = new Scanner(System.in);</p>
+    <p>    // Utilizamos el scanner para leer el número</p>
+    <p>    System.out.print("Ingresa la cantidad de números: "); </p>
+    <p>    int n = input.nextInt();</p>
+    <p></p>
+    <p>    int multiplier = 1;</p>
+    <p>    for (int i = 1; i <= n; i++) {</p>
+    <p>      // La serie con la operación i^multiplier</p>
+    <p>      // La variable multiplier incrementa 2 en cada ciclo</p>
+    <p>      int operacion = (int) Math.pow(i, multiplier);</p>
+    <p>      multiplier += 2;</p>
+    <p>      </p>
+    <p>      System.out.print(operacion + ", ");</p>
+    <p></p>
+    <p>    }</p>
+    <p>    System.out.println();</p>
+    <p></p>
+    <p>    input.close();</p>
+    <p>  }</p>
+    <p>}</p>
+    <p></p>
+  </code>
+</main>
+{{> nav prevHref='tarea17.html' nextHref='tarea19.html' }}
+{{/layout}}
+
