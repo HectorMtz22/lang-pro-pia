@@ -93,103 +93,49 @@
             >Contacto</a></section>
         </aside>        <main class="container">
           <main class="container__filled">
-          <h2>Tarea 17: Conversión de monedas</h2>
+          <h2>Tarea 18: Serie A</h2>
           <section>
             <p>
-              Elabore un programa en JAVA que a través de un Menú 
-              de opciones permita al usuario convertir de pesos a las 
-              siguientes monedas:
+              Construya un programa en JAVA que calcule e imprima la siguiente serie para los N 
+              primeros términos:
             </p>
-            <ol>
-              <li>Dólar</li>
-              <li>Euro</li>
-              <li>Yen (japonés)</li>
-              <li>Dólar de Hong Kong</li>
-            </ol>
-            <p>
-              Notas: 
-            </p>
-            <ul>
-              <li>Las equivalencias deberán definirse dentro del programa.</li>
-              <li>Usar el cuadro de diálogo showOptionDialog(), para seleccionar: Dólar, Euro, Yen y DolarHK</li>
-            </ul>
+            <img src="img/tarea18.png" alt="Diagrama con la serie a realizar" />
           </section>
           </main>
           <code class="code">
             <p>// Héctor Mauricio Flores Martínez 1897759</p>
-            <p>import javax.swing.JOptionPane;</p>
+            <p>import java.lang.Math;</p>
+            <p>import java.util.Scanner;</p>
             <p></p>
-            <p>public class tarea17 {</p>
+            <p>public class tarea18 {</p>
             <p>  public static void main(String[] args) {</p>
-            <p>    double resultado = 0;</p>
-            <p>    String[] options = {</p>
-            <p>      "Dolar", </p>
-            <p>      "Euro", </p>
-            <p>      "Yen", </p>
-            <p>      "DolarHK"</p>
-            <p>    };</p>
-            <p>    int seleccion = JOptionPane.showOptionDialog(</p>
-            <p>      null, </p>
-            <p>      "Conversor de Pesos a otra moneda", </p>
-            <p>      "Tarea 17", </p>
-            <p>      JOptionPane.DEFAULT_OPTION, </p>
-            <p>      JOptionPane.INFORMATION_MESSAGE, </p>
-            <p>      null, </p>
-            <p>      options, </p>
-            <p>      options[0] </p>
-            <p>    );</p>
+            <p>    Scanner input = new Scanner(System.in);</p>
+            <p>    // Utilizamos el scanner para leer el número</p>
+            <p>    System.out.print("Ingresa la cantidad de números: "); </p>
+            <p>    int n = input.nextInt();</p>
             <p></p>
-            <p>    String inputDinero = JOptionPane.showInputDialog("Ingresa la cantidad (en pesos)"); </p>
-            <p>    float dinero = Float.parseFloat(inputDinero);</p>
+            <p>    int multiplier = 1;</p>
+            <p>    for (int i = 1; i <= n; i++) {</p>
+            <p>      // La serie con la operación i^multiplier</p>
+            <p>      // La variable multiplier incrementa 2 en cada ciclo</p>
+            <p>      int operacion = (int) Math.pow(i, multiplier);</p>
+            <p>      multiplier += 2;</p>
+            <p>      </p>
+            <p>      System.out.print(operacion + ", ");</p>
             <p></p>
-            <p>    switch (seleccion) {</p>
-            <p>      case 0:</p>
-            <p>        // Dolar</p>
-            <p>        System.out.println("Dolar");</p>
-            <p>        resultado = dinero * 0.049;</p>
-            <p>        break;</p>
-            <p>      </p>
-            <p>      case 1:</p>
-            <p>        // Euro </p>
-            <p>        System.out.println("Euro");</p>
-            <p>        resultado = dinero * 0.042;</p>
-            <p>        break;</p>
-            <p>      </p>
-            <p>      case 2:</p>
-            <p>        // Yen (Japones)</p>
-            <p>        System.out.println("Yen");</p>
-            <p>        resultado = dinero * 5.55;</p>
-            <p>        break;</p>
-            <p>      </p>
-            <p>      case 3:</p>
-            <p>        // DolarHK</p>
-            <p>        System.out.println("DolarHK");</p>
-            <p>        resultado = dinero * 0.38;</p>
-            <p>        break;</p>
-            <p>    </p>
-            <p>      default:</p>
-            <p>        System.out.println("Datos Inválidos");</p>
-            <p>        break;</p>
             <p>    }</p>
+            <p>    System.out.println();</p>
             <p></p>
-            <p></p>
-            <p>    String mensajeFinal = String.format("El resultado es: %.2f", resultado);</p>
-            <p>    JOptionPane.showMessageDialog(</p>
-            <p>      null, </p>
-            <p>      mensajeFinal, </p>
-            <p>      "Tarea 17", </p>
-            <p>      JOptionPane.INFORMATION_MESSAGE</p>
-            <p>    );</p>
-            <p>    System.out.println(mensajeFinal);</p>
+            <p>    input.close();</p>
             <p>  }</p>
             <p>}</p>
             <p></p>
           </code>
         </main>
         <nav class="navigation">
-          <a href=tarea16.html><i class="fas fa-arrow-left"></i></a>
+          <a href=tarea17.html><i class="fas fa-arrow-left"></i></a>
           <a href="index.html"><i class="fas fa-home"></i></a>
-          <a href=tarea18.html><i class="fas fa-arrow-right"></i></a>
+          <a href=tarea19.html><i class="fas fa-arrow-right"></i></a>
         </nav>    </main>
     <footer>
       <p>Hecho por: Héctor Mtz</p>
