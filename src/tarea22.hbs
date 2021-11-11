@@ -1,0 +1,97 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 22: Multiplicación de Matrices</h2>
+  <section>
+    <p>
+      Elaborar un programa en Java que calcule la multiplicación de dos matrices que ingrese el 
+      usuario. (Nota: Validar lo que sea necesario para poder realizar la multiplicación de matrices).
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <p>// Héctor Mauricio Flores Martínez 1897759</p>
+    <p>import java.util.Scanner;</p>
+    <p></p>
+    <p>public class tarea22 {</p>
+    <p>  public static void main(String[] args) {</p>
+    <p>    Scanner input = new Scanner(System.in);</p>
+    <p></p>
+    <p>    System.out.println("Matriz 1");</p>
+    <p>    System.out.print("Ingresa el número de las filas: ");</p>
+    <p>    int n = input.nextInt();</p>
+    <p></p>
+    <p>    System.out.print("Ingresa el número de columnas: ");</p>
+    <p>    int m = input.nextInt();</p>
+    <p></p>
+    <p>    // Declaramos la matriz1</p>
+    <p>    int[][] matrix1 = new int[n][m];</p>
+    <p>    matrix1 = llenaMatriz(input, n, m);</p>
+    <p></p>
+    <p>    int n2, m2;</p>
+    <p>    do {</p>
+    <p>      System.out.println("Matriz 2");</p>
+    <p>      System.out.print("Ingresa el número de las filas: ");</p>
+    <p>      n2 = input.nextInt();</p>
+    <p></p>
+    <p>      System.out.print("Ingresa el número de columnas: ");</p>
+    <p>      m2 = input.nextInt();</p>
+    <p>      // Verificación columna -> fila; fila -> columna</p>
+    <p>      if (n != m2 || m != n2) {</p>
+    <p>        System.out.println("Las filas de la matriz 1 debe coincidir con la columna 2");</p>
+    <p>        System.out.println("Las columnas de la matriz 1 debe coincidir con la fila 2\n");</p>
+    <p>      }</p>
+    <p>    } while (n != m2 || m != n2);</p>
+    <p></p>
+    <p>    // Declaramos la matriz2</p>
+    <p>    int[][] matrix2 = new int[m][n];</p>
+    <p>    matrix2 = llenaMatriz(input, m, n);</p>
+    <p>    // Hacemos la multiplicación en otra matriz</p>
+    <p>    int[][] matrix3 = new int[n][n];</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < n; j++) {</p>
+    <p>        /*Se utiliza un for adicional para</p>
+    <p>          sumar todas las columnas con las filas </p>
+    <p>          y guardarlo en una posición */</p>
+    <p>        for (int k = 0; k < m; k++) {</p>
+    <p>          matrix3[i][j] += matrix1[i][k] * matrix2[k][j];</p>
+    <p>        }</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p></p>
+    <p>    imprimirMatriz(matrix3, n, n);</p>
+    <p></p>
+    <p>  }</p>
+    <p>  // Subrutina para llenar la matriz</p>
+    <p>  // Se vió por primera vez en tarea 20</p>
+    <p>  public static int[][] llenaMatriz (Scanner input, int n, int m) {</p>
+    <p>    int[][] matrix = new int[n][m];</p>
+    <p>    // Llenamos la matriz</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        System.out.print("A[" + i + "][" + j + "] = ");</p>
+    <p>        matrix[i][j] = input.nextInt();</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p>    return matrix;</p>
+    <p>  }</p>
+    <p></p>
+    <p>  // Subrutina para imprimir la matriz</p>
+    <p>  // Se vió por primera vez en tarea 20</p>
+    <p>  public static void imprimirMatriz (int[][] matrix, int n, int m) {</p>
+    <p>    // Imprime la matriz</p>
+    <p>	  System.out.println("\nMatriz");</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        // Formatea los números</p>
+    <p>        System.out.printf("%4d ", matrix[i][j]);</p>
+    <p>      }</p>
+    <p>      System.out.println();</p>
+    <p>	  }</p>
+    <p>  }</p>
+    <p>}</p>
+    <p></p>
+  </code>
+  </main>
+{{> nav prevHref='tarea21.html' nextHref='tareas.html' }}
+{{/layout}}
