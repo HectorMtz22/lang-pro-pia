@@ -1,0 +1,86 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 20: Búsqueda en Matriz</h2>
+  <section>
+    <p>
+      Construya un programa en Java que, al recibir como datos un 
+      arreglo bidimensional de NxM elementos de tipo entero y un número 
+      entero, determine cuántas veces se encuentra este número dentro del arreglo. 
+      Además, que imprima la matriz al final.
+    </p>
+    <p>
+      Ejemplo:
+    </p>
+    <p>
+      Elemento a buscar: 8
+    </p>
+    <p>El 8 aparece 3 veces</p>
+    <img src="img/tarea20.png" alt="Tarea propuesta" />
+  </section>
+  </main>
+  <code class="code">
+    <p>// Héctor Mauricio Flores Martínez 1897759</p>
+    <p>import java.util.Scanner;</p>
+    <p></p>
+    <p>public class tarea20 {</p>
+    <p>  public static void main(String[] args) {</p>
+    <p>    Scanner input = new Scanner(System.in);</p>
+    <p></p>
+    <p>    System.out.print("Ingresa el número de filas: ");</p>
+    <p>    int n = input.nextInt();</p>
+    <p></p>
+    <p>    System.out.print("Ingresa el número de columnas: ");</p>
+    <p>    int m = input.nextInt();</p>
+    <p></p>
+    <p>    // Declaramos la matriz</p>
+    <p>    int[][] matrix = new int[n][m];</p>
+    <p></p>
+    <p>    // Llenamos la matriz</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        System.out.print("A[" + i + "][" + j + "] = ");</p>
+    <p>        matrix[i][j] = input.nextInt();</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p></p>
+    <p>    // Pedimos el valor a buscar</p>
+    <p>    System.out.print("Ingresa el número a buscar: ");</p>
+    <p>    int valorBuscado = input.nextInt();</p>
+    <p></p>
+    <p>    int vecesEncontrado = 0;</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        if (valorBuscado == matrix[i][j]) {</p>
+    <p>          vecesEncontrado++;</p>
+    <p>        }</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p></p>
+    <p>    // Imprime el resultado</p>
+    <p>    System.out.println("El " </p>
+    <p>      + valorBuscado </p>
+    <p>      + " aparece " </p>
+    <p>      + vecesEncontrado </p>
+    <p>      + " veces."</p>
+    <p>    );</p>
+    <p></p>
+    <p>    // Imprime la matriz</p>
+    <p>	  System.out.println("\nMatriz");</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      for (int j = 0; j < m; j++) {</p>
+    <p>        // Formatea los números</p>
+    <p>        System.out.printf("%4d ", matrix[i][j]);</p>
+    <p>      }</p>
+    <p>      System.out.println();</p>
+    <p>		}</p>
+    <p></p>
+    <p>    input.close();</p>
+    <p>  }</p>
+    <p>}</p>
+    <p></p>
+  </code>
+</main>
+{{> nav prevHref='tarea19.html' nextHref='tarea21.html' }}
+{{/layout}}
+
