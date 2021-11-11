@@ -1,0 +1,79 @@
+{{#> layout stylesheet='tareas'}}
+<main class="container">
+  <main class="container__filled">
+  <h2>Tarea 19: Búsqueda en Vector</h2>
+  <section>
+    <p>
+      Elabora un programa en JAVA que realice una búsqueda de un número en un vector, mostrando solamente 
+      un mensaje indicando cuantas veces apareció el número. Admás de imprimir el vector.
+    </p>
+    <p>
+      Ejemplo:
+    </p>
+    <p>
+      Valor a buscar: 4
+    </p>
+    <p>
+      "El número 4 aparece 2 veces en el vector: "
+    </p>
+    <p>
+      [1, 4, 7, 9, 21, 4, 0, 2, 5, 2]
+    </p>
+  </section>
+  </main>
+  <code class="code">
+    <p>// Héctor Mauricio Flores Martínez 1897759</p>
+    <p>import java.util.Arrays;</p>
+    <p>import java.util.Scanner;</p>
+    <p></p>
+    <p>public class tarea19 {</p>
+    <p>  public static void main(String[] args) {</p>
+    <p>    Scanner input = new Scanner(System.in);</p>
+    <p>    int n;</p>
+    <p>    int[] A;</p>
+    <p></p>
+    <p>    // El tamaño del vector</p>
+    <p>    System.out.print("Ingrese el total de números: ");</p>
+    <p>    n = input.nextInt();</p>
+    <p>    A = new int[n];</p>
+    <p></p>
+    <p>    // Recupera cada vector de forma dinámica</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>        System.out.print("A[" + i + "] = ");</p>
+    <p>        A[i] = input.nextInt();</p>
+    <p>    }</p>
+    <p></p>
+    <p>    // Ahora vamos a buscar el valor</p>
+    <p>    System.out.print("Ingrese el valor a buscar: ");</p>
+    <p>    int buscarValor = input.nextInt();</p>
+    <p></p>
+    <p>    // Inicializamos la variable y vamos a ver cuantos valores hay</p>
+    <p>    int valoresEncontrados = 0;</p>
+    <p>    for (int i = 0; i < n; i++) {</p>
+    <p>      if (A[i] == buscarValor) {</p>
+    <p>        valoresEncontrados++;</p>
+    <p>      }</p>
+    <p>    }</p>
+    <p></p>
+    <p>    // Cadena que imprime la cantidad de valores encontrados</p>
+    <p>    System.out.println("El número " </p>
+    <p>      + buscarValor </p>
+    <p>      + " aparece " </p>
+    <p>      + valoresEncontrados </p>
+    <p>      + " veces en el vector:"</p>
+    <p>    );</p>
+    <p></p>
+    <p>    // Cadena que imprime el Array</p>
+    <p>    System.out.println(Arrays.toString(A));</p>
+    <p></p>
+    <p>    input.close();</p>
+    <p>  }</p>
+    <p>  </p>
+    <p>}</p>
+    <p></p>
+  </code>
+</main>
+{{> nav prevHref='tarea18.html' nextHref='tarea20.html' }}
+{{/layout}}
+
+
